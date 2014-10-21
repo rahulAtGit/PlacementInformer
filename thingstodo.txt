@@ -1,10 +1,24 @@
 Things which need to be done
-- download all scripts so that the project can run offline
-- adding companies by PC's
+
+-work on the design and completely responsive
+-edit details page
+-date display(edit the format)
+-branches- drop down menu
+-attachments
+-student registrations(signup)
+-student registering for the company(make the apply button work)
+-change password+forgot password
+-mail+sms
+-loading more companies
+-search functionality
+-PC excel sheet generation
+-Timer in the student page
+-Company description page
+-Admin page
+-Notifications
 - refining login by adding encryption to passwords
 - add a common file for sessions.
-- 
 
-Things done
-- added login to all files - 24 sept
-- 
+things done-
+
+
