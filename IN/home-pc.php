@@ -68,7 +68,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
 	<body>
 
-<div id="wrapper" class="toggled">
+<!--<div id="wrapper" class="toggled">
 	
 
         <div id="sidebar-wrapper">
@@ -88,9 +88,9 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                 
             </ul>
         </div>
-
-        <!-- /#sidebar-wrapper -->
-		<div id="page-content-wrapper">
+-->
+        <!-- /#sidebar-wrapper 
+		<div id="page-content-wrapper">-->
         
 		<div class="navbar navbar-inverse" >
         <div class="container">
@@ -100,7 +100,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> 
-			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>	
+		<!--	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>	-->
            <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle img-responsive" class="img-responsive" id="logo"></a>
 		
             </div>
@@ -114,7 +114,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
            
         </div>
         </div>
-		</div>
+		
 		
 		
 		
@@ -169,8 +169,12 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
  		</div>
 		</div>
 
+
+		
 		<div class="row">
-			<div class="a col-xs-12 col-sm-12 col-md-5 col-lg-5 col-lg-push-7 col-md-push-7">
+
+			<div id="body-content">
+			<div class="a col-xs-12 col-sm-12 col-md-6 col-lg-6 col-lg-push-6 col-md-push-6">
 
 				<form class="form-horizontal" name = "detailsUpcomingCompany" enctype="multipart/form-data" method = "post" id = "detailsUpcomingCompany" action = "<?php echo htmlspecialchars('php/home-pc-insert.php');?>">
 					<fieldset>
@@ -373,12 +377,14 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
 
 		</div>
-		<div class="b col-xs-12 col-sm-12 col-md-6 col-lg-6 col-lg-pull-4 col-md-pull-4">
-		<h4 class="panel-heading">
-        <strong>Download Registration Excel Sheet:</strong><br>
-		<h5 class="panel-heading"><strong>Today</strong></h5>
-        </h4>
-		<?php
+		</div>
+
+		<div id="body-content1">
+		<div class="b col-xs-12 col-sm-12 col-md-6 col-lg-6 col-lg-pull-6 col-md-pull-6">
+		
+			<legend>Download Registration Excel Sheet:</legend>
+        <h4 class="panel-heading">Today</h4>
+        		<?php
 
 
             $uname = $_SESSION['usernameT'];
@@ -422,7 +428,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
           }
 
           ?>
-            <h5 class="panel-heading"><strong>Upcoming Companies:</strong></h5>
+            <h4 class="panel-heading">Upcoming Companies:</h4>
             <?php
 			$result = mysqli_query($con,"SELECT * FROM COMPANY as C, DATEOFVISIT as D where C.NAME = D.NAME and D.DATE > curdate() ORDER BY D.DATE");
 			
@@ -442,7 +448,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                 echo "</div>";
             }?>
 
-        <h5 class="panel-heading"><strong>Visited Companies:</strong></h5>
+        <h4 class="panel-heading">Visited Companies:</h4>
             <?php
             $result = mysqli_query($con,"SELECT * FROM COMPANY as C, DATEOFVISIT as D where C.NAME = D.NAME and D.DATE < curdate() ORDER BY D.DATE");
 
@@ -467,8 +473,8 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		</div>
 
 		</div>
-		
 		</div>
+		<!--</div>-->
 
 <script type="text/javascript" src="./jquery1/jquery-1.8.3.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="./bootstrap1/js/bootstrap.min.js"></script>

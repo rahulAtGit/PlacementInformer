@@ -55,10 +55,10 @@ header('Location: ../');
 
 <body>
 
-    <div id="wrapper" class="toggled">
+<!--    <div id="wrapper" class="toggled">
 	
 
-        <!-- Sidebar -->
+        
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -161,10 +161,10 @@ header('Location: ../');
                 </li>
                 
             </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+        </div>-->
+        <!-- /#sidebar-wrapper 
 		<div id="page-content-wrapper">
-        
+-->        
 		<div class="navbar navbar-inverse" >
         <div class="container">
             <div class="navbar-header">
@@ -173,8 +173,8 @@ header('Location: ../');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> 
-				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
-            <!--        <span class="genericon genericon-menu"></span>
+			<!--	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
+                    <span class="genericon genericon-menu"></span>
                 </a>-->
 			<!--	<div alt="f419" class="genericon genericon-menu"></div>
         -->
@@ -183,15 +183,16 @@ header('Location: ../');
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" >Edit Profile</a></li>
                     <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
-                     <li><a href="php/logout.php">Logout</a></li>
+                    <li><a href="php/logout.php">Logout</a></li>
                     
                 </ul>
             </div>
            
         </div>
         </div>
-		</div>
+	<!--	</div>-->
         
 
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -250,9 +251,9 @@ header('Location: ../');
 
 
 
-        <!-- Page Content -->
-		<div id="page-content-wrapper">
-		
+        <!-- Page Content 
+		<div id="page-content-wrapper">-->
+		<div id="body-content">
 		<h4 class="panel-heading">
         <strong>Today's Company</strong>
         </h4>
@@ -582,11 +583,12 @@ header('Location: ../');
 			echo "</div>";
 		}
 		?>
-</div>
-        </div>
-        <!-- /#page-content-wrapper -->
+		</div>
+	</div>
+        <!--</div>
+         /#page-content-wrapper -->
 
-    </div>
+   <!-- </div>-->
 	
     <!-- /#wrapper -->
 
