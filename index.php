@@ -25,6 +25,7 @@ else
 </style>
 
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto+Slab'>
+      <link rel="SHORTCUT ICON" href="images/rvce.ico">
 
     <style>
 * {

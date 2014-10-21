@@ -23,7 +23,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		<meta name="author" content="">
 
 		<title>Placement Informer</title>
-
+		<link rel="SHORTCUT ICON" href="images/rvce.ico">
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/simple-sidebar.css" rel="stylesheet">
