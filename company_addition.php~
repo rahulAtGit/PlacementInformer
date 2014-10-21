@@ -1,0 +1,10 @@
+<?php
+//$con =  mysqli_connect("localhost","root","admin","placementinformer");
+//if ($con->connect_errno) {
+  //  printf("Connect failed: %s\n", $con->connect_error);
+//    exit();
+//}
+//$r = mysqli_query($con, "select USN from STUDENT LIMIT 1;");
+echo 'yes';
+//echo $r->num_rows;
+?>

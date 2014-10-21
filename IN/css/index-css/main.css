@@ -1,0 +1,28 @@
+#logo{
+position:relative;
+top:-34px;
+left:80%;
+}
+
+#menu-toggle{
+position:relative;
+top:10px;
+left:-70%;
+}
+.container-fluid{
+background-color:#eee;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+margin:2%;
+padding:20px;
+}
+.each{
+padding-bottom:10px;
+}
+
+#basicModal{
+left:50%;
+overflow:visible;
+
+}

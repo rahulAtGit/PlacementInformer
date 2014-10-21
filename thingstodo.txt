@@ -1,0 +1,10 @@
+Things which need to be done
+- download all scripts so that the project can run offline
+- adding companies by PC's
+- refining login by adding encryption to passwords
+- add a common file for sessions.
+- 
+
+Things done
+- added login to all files - 24 sept
+- 

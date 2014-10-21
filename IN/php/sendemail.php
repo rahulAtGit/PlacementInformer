@@ -1,0 +1,83 @@
+<?php
+// Initialize session
+//session_start();
+/*
+// Check, if username session is NOT set then this page will jump to login page
+if ((!isset($_SESSION['username']))||(!isset($_SESSION['password']) )){
+    header('Location: ../..');
+}
+*/
+
+
+//date_default_timezone_set('America/Toronto');
+require_once('PHPMailer_5.2.4/class.phpmailer.php');
+//include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
+/*$mysqli = new mysqli("localhost", "root", "", "placementinformer"); // put "" for the password if you want to run them
+/* check connection
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+*/
+
+function sendmail($toemailid,$name, $subject, $body)
+{
+    $mail = new PHPMailer();
+//collecting to addresses
+
+//end of collecting to addresses
+
+//$body             = eregi_replace("[\]",'',$body);
+
+    $mail->IsSMTP(); // telling the class to use SMTP
+    $mail->Host = "ssl://smtp.gmail.com"; // SMTP server
+    $mail->SMTPDebug = 1;                     // enables SMTP debug information (for testing)
+// 1 = errors and messages
+// 2 = messages only
+    $mail->SMTPAuth = true;                  // enable SMTP authentication
+    $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+    $mail->Host = "smtp.gmail.com";      // sets GMAIL as the SMTP server
+    $mail->Port = 465;                   // set the SMTP port for the GMAIL server
+    $mail->Username = "placementinformer@gmail.com";  // GMAIL username
+    $mail->Password = "RVCE1963";            // GMAIL password
+
+    $mail->SetFrom('placementinformer@gmail.com', 'RVCE Placements');
+
+    $mail->AddReplyTo('placementinformer@gmail.com', 'RVCE Placements');
+
+    $mail->Subject = $subject;//Add a subject
+
+//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
+
+    /*
+    $result = mysqli_query($mysqli,"SELECT name,EMAIL FROM STUDENT WHERE 1;");
+    echo mysqli_num_rows($result);
+
+    for($i=0; $i<mysqli_num_rows($result);$i++)
+    {
+        $row= mysqli_fetch_row($result);
+        $mail->AddAddress($row[1],$row[0]);
+        mysqli_next_result($mysqli);
+        echo $row[1].'\n';
+    }
+    */
+    $mail->MsgHTML($body);
+    $mail->AddAddress($toemailid, $name);
+
+
+//$mail->AddAttachment("images/phpmailer.gif");      // attachment
+//$mail->AddAttachment("images/phpmailer_mini.gif"); // attachment
+
+    if (!$mail->Send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+
+    } else {
+        echo "Message sent!";
+    }
+    var_dump($mail);
+}
+?>
+
+
+

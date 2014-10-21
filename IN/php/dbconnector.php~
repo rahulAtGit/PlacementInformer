@@ -1,0 +1,16 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ramu
+ * Date: 18/9/14
+ * Time: 9:23 PM
+ * This file is used to connect to the database
+ */
+
+$mysqli = new mysqli("localhost", "root", "admin", "placementinformer"); // put "" for the password if you want to run them
+/* check connection */
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+?>

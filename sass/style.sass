@@ -1,0 +1,117 @@
+@import "compass/css3"
+
+$background-color: #F15A5C  
+$easing-function: cubic-bezier(.06,.63,0,1)
+$animation-duration: 1s
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  
+html, body 
+  height: 100%
+  background-color: $background-color
+  font-family: 'Roboto Slab', serif
+  color: white
+// see http://css-tricks.com/transitions-only-after-page-load/
+.preload *
+  transition: none !important
+    
+label
+  display: block
+  font-weight: bold
+  font-size: small
+  text-transform: uppercase
+  font-size: 0.7em
+  margin-bottom: 0.35em
+
+    
+input[type="text"], input[type="password"]
+  width: 100%
+  border: none
+  padding: 0.5em
+  border-radius: 2px
+  margin-bottom: 0.5em
+  color: #333
+  &:focus
+    outline: none
+    box-shadow: inset -1px -1px 3px rgba(0, 0, 0, .3)
+  
+button
+  padding-left: 1.5em
+  padding-right: 1.5em
+  padding-bottom: 0.5em
+  padding-top: 0.5em
+  border: none
+  border-radius: 2px
+  background-color: #7E5AF1
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25)
+  color: white
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45)
+    
+
+small
+  font-size: 1em
+  
+
+.login--login-submit
+  float: right
+
+.login--container
+  width: 600px
+  background-color: $background-color
+  margin: 0 auto
+  position: relative
+  top: 25%
+  
+.login--toggle-container
+  position: absolute
+  background-color: $background-color
+  right: 0
+  line-height: 2.5em
+  width: 50%
+  height: 120px
+  text-align: right
+  cursor: pointer
+  transform: perspective(1000px) translateZ(1px)
+  transform-origin: 0% 0%
+  transition: all $animation-duration $easing-function
+  backface-visibility: hidden
+  //border: 1px solid black
+  .js-toggle-login
+    font-size: 4em
+    text-decoration: underline
+
+  .login--active &
+    transform: perspective(1000px) rotateY(180deg)
+    background-color: darken($background-color, 25%)
+    
+
+.login--username-container, .login--password-container
+  float: left
+  background-color: $background-color
+  width: 50%
+  height: 120px
+  padding: .5em
+  
+    
+    
+.login--username-container
+  transform-origin: 100% 0%
+  transform: perspective(1000px) rotateY(180deg)
+  transition: all $animation-duration $easing-function
+  background-color:  darken($background-color, 25%)
+  backface-visibility: hidden
+    
+  .login--active &
+    transform: perspective(1000px) rotateY(0deg)
+  
+    background-color: $background-color
+
+
+footer
+  position: absolute
+  bottom: 12px
+  left: 20px
+    
