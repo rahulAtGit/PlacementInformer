@@ -484,7 +484,8 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		startView: 2,
 		forceParse: 0,
         showMeridian: 1,
-		pickerPosition: 'bottom-left'
+		pickerPosition: 'bottom-left',
+		startDate: '+0d'
     });
 	
 </script>
