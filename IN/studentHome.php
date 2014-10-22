@@ -167,34 +167,34 @@ header('Location: ../');
 		<div id="page-content-wrapper">
 -->
 		<div class="navbar navbar-inverse" >
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                <!--	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
-                        <span class="genericon genericon-menu"></span>
-                    </a>-->
-                <!--	<div alt="f419" class="genericon genericon-menu"></div>
-            -->
-               <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle" class="img-responsive" id="logo"></a>
-
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="edit-profile.php" >Edit Profile</a></li>
-                        <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
-                        <li><a href="php/logout.php">Logout</a></li>
-
-                    </ul>
-                </div>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+			<!--	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
+                    <span class="genericon genericon-menu"></span>
+                </a>-->
+			<!--	<div alt="f419" class="genericon genericon-menu"></div>
+        -->
+           <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle" class="img-responsive" id="logo"></a>
 
             </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="edit-profile.php" >Edit Profile</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
+                    <li><a href="php/logout.php">Logout</a></li>
+
+                </ul>
+            </div>
+
+        </div>
         </div>
 	<!--	</div>-->
-        
+
 
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
     	<div class="modal-dialog">
@@ -219,7 +219,7 @@ header('Location: ../');
 			<div class="form-group">
 			<label class="col-md-4 control-label" for="newpass">New Password</label>
 			<div class="col-md-5">
-    			<input id="newpass" name="newpass" type="password" placeholder="New Password" class="form-control input-md">    
+    			<input id="newpass" name="newpass" type="password" placeholder="New Password" class="form-control input-md">
  			</div>
 			</div>
 
@@ -227,13 +227,13 @@ header('Location: ../');
 			<div class="form-group">
   			<label class="col-md-4 control-label" for="connewpass">Confirm New Password</label>
   			<div class="col-md-5">
-    			<input id="connewpass" name="connewpass" type="password" placeholder="Confirm New Password" class="form-control input-md">    
+    			<input id="connewpass" name="connewpass" type="password" placeholder="Confirm New Password" class="form-control input-md">
 		    </div>
 			</div>
 
 			</fieldset>
 			</form>
-								
+
         </div>
         <div class="modal-footer">
         <a href="#" style="position:relative; float:left">Forgot password?</a>
@@ -252,24 +252,23 @@ header('Location: ../');
 
 
 
-        <!-- Page Content 
+        <!-- Page Content
 		<div id="page-content-wrapper">-->
 		<div id="body-content">
 		<h4 class="panel-heading">
         <strong>Today's Company</strong>
         </h4>
-		
+
 		<?php
 		$result = mysqli_query($con,"SELECT branch FROM student where USN = '$uname';");
-        //echo $result;
 		$date = date('Y-m-d');
-		
+
 		$db_field=mysqli_fetch_assoc($result);
 		$branch = $db_field['branch'];
 	//	$result = mysqli_query($con,"SELECT * FROM company where name in (select b.name from dateofvisit as d , brancheseligible as b where d.date = '$date' and b.branch = '$branch' )");
         $date = date('Y-m-d');
 		$result = mysqli_query($con,"SELECT distinct c.* FROM company as c,dateofvisit as d, brancheseligible as b where c.NAME = d.name and c.name = b.name and d.date = '$date' and b.branch = '$branch';");
-		
+
 		if(mysqli_num_rows($result)==0)
 		{
 			echo "<div class=\"container-fluid col\" >";
@@ -279,30 +278,30 @@ header('Location: ../');
 		}
 		else
 		{
-		
+
 		while($db_field=mysqli_fetch_assoc($result))
 		{
 			//print_r($db_field);
 			echo "<div class=\"container-fluid\" >";
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Name:";
 			$companyName = $db_field['NAME'];
-			
+
 			echo "<span style='color:blue;margin-left:10px;'>".$companyName."</span>";
 			echo "</div>";
-		
-		
+
+
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Date:"."</span>";
-		
-			$resultDates = mysqli_query($con,"SELECT * FROM dateofvisit where NAME = '".$companyName."'"); 
+
+			$resultDates = mysqli_query($con,"SELECT * FROM dateofvisit where NAME = '".$companyName."'");
 			while($db_field_dates=mysqli_fetch_assoc($resultDates))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_dates['DATE'].", "."</span>";
 			}
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Profile:";
-			$resultProfile = mysqli_query($con,"SELECT * FROM jobprofile where NAME = '".$companyName."'"); 
+			$resultProfile = mysqli_query($con,"SELECT * FROM jobprofile where NAME = '".$companyName."'");
 			while($db_field_profile=mysqli_fetch_assoc($resultProfile))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_profile['PROFILE'].", "."</span>";
@@ -317,15 +316,15 @@ header('Location: ../');
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">12th C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['PUCCUTOFF']."</span>";
 			echo "</div>";
-		
+
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">Diploma C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['DIPLOMACUTOFF']."</span>";
 			echo "</div>";
-		
+
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">CGPA:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['GPACUTOFF']."</span>";
 			echo "</div>";
-		
+
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Package:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['PACKAGE']."LPA"."</span>";
 			echo "</div>";
@@ -337,20 +336,19 @@ header('Location: ../');
 			echo "</div>";
 
 
-			echo "<div class=\"col-md-6 col-sm-6 col-lg-6 col-xs-12 each\">Branches Eligible:";
-			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'"); 
-			while($db_field_branch=mysqli_fetch_assoc($resultBranches))
-			{
-				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
-			}
-			echo "</div>";
+            echo "<div class=\"col-md-6 col-sm-6 col-lg-6 col-xs-12 each\">Branches Eligible:";
+            $resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'");
+            while($db_field_branch=mysqli_fetch_assoc($resultBranches))
+            {
+                echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
+            }
+            echo "</div>";
 
-			
 		echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\">Attachments:</div>
 		<div class=\"col-md-3 col-sm-6 col-lg-3 col-xs-12 each1\"></div>
 		<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each1\"></div>";
 		obtainfiles($companyName);
-			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'"); 
+			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'");
 			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	twelthPercent > ".$db_field['PUCCUTOFF']." and diplomapercent > ".$db_field['DIPLOMACUTOFF'].") ");
 			$numRows = mysqli_num_rows($resultEligibility);
 			if($numRows!=0)
@@ -378,13 +376,13 @@ header('Location: ../');
 		}
 		}
 		?>
-		
-		
+
+
 		<h4 class="panel-heading">
         <strong>    Upcoming Companies</strong>
         </h4>
 		<?php
-		
+
 		$result = mysqli_query($con,"SELECT branch FROM student where USN = '$uname';");
 		$db_field=mysqli_fetch_assoc($result);
 		$branch = $db_field['branch'];
@@ -393,19 +391,12 @@ header('Location: ../');
 
         //$result = mysqli_query($con,"SELECT * FROM company where name in (select b.name from dateofvisit as d , brancheseligible as b where d.date > curdate() and b.branch = '$branch' )");
 
-        if(mysqli_num_rows($result)==0)
-        {
-            echo "<div class=\"container-fluid col\" >";
-            echo "No Upcoming Companies";
-            echo "</div>";
-
-        }
 
 		while($db_field=mysqli_fetch_assoc($result))
 		{
 			//print_r($db_field);
 			echo "<div class=\"container-fluid\" >";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Name:";
 			$companyName = $db_field['NAME'];
@@ -414,55 +405,55 @@ header('Location: ../');
 
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Date:"."</span>";
-			$resultDates = mysqli_query($con,"SELECT * FROM dateofvisit where NAME = '".$companyName."'"); 
+			$resultDates = mysqli_query($con,"SELECT * FROM dateofvisit where NAME = '".$companyName."'");
 			while($db_field_dates=mysqli_fetch_assoc($resultDates))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_dates['DATE'].", "."</span>";
 			}
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Profile:";
-			$resultProfile = mysqli_query($con,"SELECT * FROM jobprofile where NAME = '".$companyName."'"); 
+			$resultProfile = mysqli_query($con,"SELECT * FROM jobprofile where NAME = '".$companyName."'");
 			while($db_field_profile=mysqli_fetch_assoc($resultProfile))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_profile['PROFILE'].", "."</span>";
 			}
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">10th C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['TENTHCUTOFF']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">12th C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['PUCCUTOFF']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">Diploma C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['DIPLOMACUTOFF']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">CGPA:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['GPACUTOFF']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Package:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['PACKAGE']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Register Before:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['lastDateReg']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-6 col-sm-6 col-lg-6 col-xs-12 each\">Branches Eligible:";
-			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'"); 
+			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'");
 			while($db_field_branch=mysqli_fetch_assoc($resultBranches))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
@@ -475,7 +466,7 @@ header('Location: ../');
 			<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each1\"></div>";
             obtainfiles($companyName);
 
-			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'"); 
+			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'");
 			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	twelthPercent > ".$db_field['PUCCUTOFF']." and diplomapercent > ".$db_field['DIPLOMACUTOFF'].") ");
 			$numRows = mysqli_num_rows($resultEligibility);
 			if($numRows!=0)
@@ -489,14 +480,14 @@ header('Location: ../');
 			echo "</div>";
 		}
 		?>
-		
-		
-		
+
+
+
 		<h4 class="panel-heading">
         <strong>    Past Companies</strong>
         </h4>
-		
-		
+
+
 		<?php
 
         $date = date('Y-m-d');
@@ -504,75 +495,68 @@ header('Location: ../');
 
         //$result = mysqli_query($con,"SELECT * FROM company where name in (select name from dateofvisit where date < curdate())");
 
-        if(mysqli_num_rows($result)==0)
-        {
-            echo "<div class=\"container-fluid col\" >";
-            echo "No Past Companies";
-            echo "</div>";
-
-        }
 
 		while($db_field=mysqli_fetch_assoc($result))
 		{
 			//print_r($db_field);
 			echo "<div class=\"container-fluid\" >";
-		
+
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Name:";
 			$companyName = $db_field['NAME'];
 			echo "<span style='color:blue;margin-left:10px;'>".$companyName."</span>";
 			echo "</div>";
-	
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Date:"."</span>";
-			$resultDates = mysqli_query($con,"SELECT * FROM dateofvisit where NAME = '".$companyName."'"); 
+			$resultDates = mysqli_query($con,"SELECT * FROM dateofvisit where NAME = '".$companyName."'");
 			while($db_field_dates=mysqli_fetch_assoc($resultDates))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_dates['DATE'].", "."</span>";
 			}
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Profile:";
-			$resultProfile = mysqli_query($con,"SELECT * FROM jobprofile where NAME = '".$companyName."'"); 
+			$resultProfile = mysqli_query($con,"SELECT * FROM jobprofile where NAME = '".$companyName."'");
 			while($db_field_profile=mysqli_fetch_assoc($resultProfile))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_profile['PROFILE'].", "."</span>";
 			}
 			echo "</div>";
-	
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">10th C/O:";
-			echo "<span style='color:blue;margin-left:10px;'>".$db_field['TENTHCUTOFF']."</span>";		
-			echo "</div>";	
-	
+			echo "<span style='color:blue;margin-left:10px;'>".$db_field['TENTHCUTOFF']."</span>";
+			echo "</div>";
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">12th C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['PUCCUTOFF']."</span>";
 			echo "</div>";
-	
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">Diploma C/O:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['DIPLOMACUTOFF']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each\">CGPA:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['GPACUTOFF']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Package:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['PACKAGE']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each\">Register Before:";
 			echo "<span style='color:blue;margin-left:10px;'>".$db_field['lastDateReg']."</span>";
 			echo "</div>";
-		
+
 
 			echo "<div class=\"col-md-6 col-sm-6 col-lg-6 col-xs-12 each\">Branches Eligible:";
-			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'"); 
+			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'");
 			while($db_field_branch=mysqli_fetch_assoc($resultBranches))
 			{
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
