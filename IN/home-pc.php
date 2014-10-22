@@ -108,7 +108,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="edit-profile.php" >Edit Profile</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
-                     <li><a href="php/logout.php">Logout</a></li>
+                    <li><a href="php/logout.php">Logout</a></li>
                     
                 </ul>
             </div>
@@ -175,7 +175,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		<div class="row">
 
 			<div id="body-content">
-			<div class="a col-xs-12 col-sm-12 col-md-6 col-lg-6 col-lg-push-6 col-md-push-6">
+			<div class="a col-xs-10 col-sm-6 col-xs-offset-1 col-sm-offset-2 col-lg-offset-0 col-md-offset-0 col-md-6 col-lg-6 col-lg-push-6 col-md-push-6">
 
 				<form class="form-horizontal" name = "detailsUpcomingCompany" enctype="multipart/form-data" method = "post" id = "detailsUpcomingCompany" action = "<?php echo htmlspecialchars('php/home-pc-insert.php');?>">
 					<fieldset>
