@@ -184,7 +184,7 @@ header('Location: ../');
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" >Edit Profile</a></li>
+                    <li><a href="edit-profile.php" >Edit Profile</a></li>
                     <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
                     <li><a href="php/logout.php">Logout</a></li>
                     
