@@ -3,11 +3,17 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 21, 2014 at 02:09 PM
+-- Generation Time: Oct 22, 2014 at 08:07 AM
 -- Server version: 5.1.36
 -- PHP Version: 5.3.0
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `placementinformer`
@@ -18,10 +24,6 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Table structure for table `applied`
 --
-
-create database `placementinformer`;
-
-use `placementinformer`;
 
 CREATE TABLE IF NOT EXISTS `applied` (
   `USN` varchar(10) DEFAULT NULL,
@@ -99,6 +101,10 @@ CREATE TABLE IF NOT EXISTS `brancheseligible` (
 -- Dumping data for table `brancheseligible`
 --
 
+INSERT INTO `brancheseligible` (`name`, `branch`) VALUES
+('Ebay', 'ISE'),
+('Ebay', 'CSE'),
+('Ebay', 'ECE');
 
 -- --------------------------------------------------------
 
@@ -121,6 +127,8 @@ CREATE TABLE IF NOT EXISTS `company` (
 -- Dumping data for table `company`
 --
 
+INSERT INTO `company` (`NAME`, `PACKAGE`, `GPACUTOFF`, `TENTHCUTOFF`, `PUCCUTOFF`, `DIPLOMACUTOFF`, `lastDateReg`) VALUES
+('Ebay', 15, 7, '70', '70', '70', '22 October 2014 - 12:00 pm');
 
 -- --------------------------------------------------------
 
@@ -138,6 +146,8 @@ CREATE TABLE IF NOT EXISTS `dateofvisit` (
 -- Dumping data for table `dateofvisit`
 --
 
+INSERT INTO `dateofvisit` (`NAME`, `DATE`) VALUES
+('Ebay', '2014-10-27');
 
 -- --------------------------------------------------------
 
@@ -155,6 +165,8 @@ CREATE TABLE IF NOT EXISTS `jobprofile` (
 -- Dumping data for table `jobprofile`
 --
 
+INSERT INTO `jobprofile` (`NAME`, `PROFILE`) VALUES
+('Ebay', 'SOFTWARE ENGINEER');
 
 -- --------------------------------------------------------
 
@@ -245,10 +257,10 @@ CREATE TABLE IF NOT EXISTS `student` (
   `BRANCH` varchar(25) NOT NULL,
   `EMAIL` varchar(40) NOT NULL,
   `PHONE` int(11) NOT NULL,
-  `CGPA` decimal(10,0) NOT NULL DEFAULT '0',
-  `tenthPercent` decimal(10,0) NOT NULL DEFAULT '0',
-  `twelthPercent` decimal(10,0) NOT NULL DEFAULT '0',
-  `diplomapercent` decimal(10,0) NOT NULL DEFAULT '100',
+  `CGPA` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `tenthPercent` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `twelthPercent` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `diplomapercent` decimal(10,2) NOT NULL DEFAULT '0.00',
   `COORDINATORUSN` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`USN`),
   KEY `COORDINATORUSN` (`COORDINATORUSN`)
@@ -258,6 +270,8 @@ CREATE TABLE IF NOT EXISTS `student` (
 -- Dumping data for table `student`
 --
 
+INSERT INTO `student` (`USN`, `NAME`, `BRANCH`, `EMAIL`, `PHONE`, `CGPA`, `tenthPercent`, `twelthPercent`, `diplomapercent`, `COORDINATORUSN`) VALUES
+('1RV11IS042', 'RAM KUMAR', 'ISE', 'ramkumar.kr94@gmail.com', 2147483647, '10.00', '97.00', '98.00', '99.00', NULL);
 
 --
 -- Constraints for dumped tables

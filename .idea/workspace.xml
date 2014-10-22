@@ -28,6 +28,7 @@
       <file leaf-file-name="studentHome.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IN/studentHome.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0931677" vertical-offset="5115" max-vertical-offset="9300">
               <caret line="345" column="12" selection-start-line="345" selection-start-column="12" selection-end-line="345" selection-end-column="12" />
               <folding>
@@ -87,11 +88,98 @@
                 <marker date="1413982161716" expanded="true" signature="20400:20462" placeholder="SELECT * FRO..brancheseligible..." />
                 <marker date="1413982161716" expanded="false" signature="20558:20586" placeholder="..." />
                 <marker date="1413982161716" expanded="true" signature="21149:21382" placeholder="SELECT * FRO..student..." />
+=======
+            <state vertical-scroll-proportion="0.6274165" vertical-offset="8347" max-vertical-offset="10761">
+              <caret line="512" column="26" selection-start-line="512" selection-start-column="26" selection-end-line="512" selection-end-column="26" />
+              <folding>
+                <marker date="1413964873363" expanded="true" signature="2663:2708" placeholder="SELECT name ..student..." />
+                <marker date="1413964873363" expanded="true" signature="2924:2970" placeholder="SELECT email..student..." />
+                <marker date="1413964873363" expanded="true" signature="3185:3229" placeholder="SELECT usn F..student..." />
+                <marker date="1413964873363" expanded="true" signature="3445:3492" placeholder="SELECT branc..student..." />
+                <marker date="1413964873363" expanded="true" signature="3709:3754" placeholder="SELECT cgpa ..student..." />
+                <marker date="1413964873363" expanded="true" signature="3984:4037" placeholder="SELECT tenth..student..." />
+                <marker date="1413964873363" expanded="true" signature="4274:4328" placeholder="SELECT twelt..student..." />
+                <marker date="1413964873363" expanded="true" signature="4555:4601" placeholder="SELECT phone..student..." />
+                <marker date="1413964873363" expanded="true" signature="8237:8284" placeholder="SELECT branc..student..." />
+                <marker date="1413964873363" expanded="true" signature="8660:8825" placeholder="SELECT disti..company..." />
+                <marker date="1413964873363" expanded="true" signature="8914:8961" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="9099:9205" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="9169:9205" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="9241:9269" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="9445:9502" placeholder="SELECT * FRO..dateofvisit..." />
+                <marker date="1413964873363" expanded="false" signature="9594:9622" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="9809:9865" placeholder="SELECT * FRO..jobprofile..." />
+                <marker date="1413964873363" expanded="false" signature="9961:9989" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="10128:10161" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="10163:10191" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="10315:10348" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="10350:10378" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="10502:10538" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="10540:10568" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="10696:10725" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="10727:10755" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="10879:10911" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="10913:10941" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="11069:11109" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="11111:11139" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="11326:11388" placeholder="SELECT * FRO..brancheseligible..." />
+                <marker date="1413964873363" expanded="true" signature="11484:11512" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="12043:12276" placeholder="SELECT * FRO..student..." />
+                <marker date="1413964873363" expanded="true" signature="13205:13252" placeholder="SELECT branc..student..." />
+                <marker date="1413964873363" expanded="true" signature="13399:13564" placeholder="SELECT disti..company..." />
+                <marker date="1413964873363" expanded="true" signature="14065:14175" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="14139:14175" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="14207:14235" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="14404:14461" placeholder="SELECT * FRO..dateofvisit..." />
+                <marker date="1413964873363" expanded="false" signature="14553:14581" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="14768:14824" placeholder="SELECT * FRO..jobprofile..." />
+                <marker date="1413964873363" expanded="false" signature="14920:14948" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="15089:15122" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="15124:15152" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="15279:15312" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="15314:15342" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="15467:15503" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="15505:15533" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="15662:15691" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="15693:15721" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="15846:15878" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="15880:15908" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="16031:16071" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="16073:16101" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="16290:16352" placeholder="SELECT * FRO..brancheseligible..." />
+                <marker date="1413964873363" expanded="false" signature="16448:16476" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="17000:17233" placeholder="SELECT * FRO..student..." />
+                <marker date="1413964873363" expanded="true" signature="17835:18053" placeholder="SELECT disti..company..." />
+                <marker date="1413964873363" expanded="true" signature="17952:18052" placeholder="SELECT disti..company..." />
+                <marker date="1413964873363" expanded="true" signature="18491:18600" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="18564:18600" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="18632:18660" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="18830:18887" placeholder="SELECT * FRO..dateofvisit..." />
+                <marker date="1413964873363" expanded="false" signature="18979:19007" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="19194:19250" placeholder="SELECT * FRO..jobprofile..." />
+                <marker date="1413964873363" expanded="false" signature="19346:19374" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="19514:19547" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="19549:19577" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="19706:19739" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="19741:19769" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="19893:19929" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="19931:19959" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="20088:20117" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="20119:20147" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="20272:20304" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="20306:20334" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="20457:20497" placeholder="..." />
+                <marker date="1413964873363" expanded="false" signature="20499:20527" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="20716:20778" placeholder="SELECT * FRO..brancheseligible..." />
+                <marker date="1413964873363" expanded="false" signature="20874:20902" placeholder="..." />
+                <marker date="1413964873363" expanded="true" signature="21423:21656" placeholder="SELECT * FRO..student..." />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="obtainfiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IN/php/obtainfiles.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,6 +200,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
     </leaf>
   </component>
   <component name="FindManager">
@@ -124,10 +214,13 @@
       <list>
         <option value="$PROJECT_DIR$/IN/php/uploadtestdriver.html" />
         <option value="$PROJECT_DIR$/IN/php/home-pc-insert.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/IN/home-pc.php" />
         <option value="$PROJECT_DIR$/IN/php/uploadfiles.php" />
         <option value="$PROJECT_DIR$/IN/uploads/index.html" />
         <option value="$PROJECT_DIR$/IN/php/obtainfiles.php" />
+=======
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
         <option value="$PROJECT_DIR$/IN/studentHome.php" />
       </list>
     </option>
@@ -184,7 +277,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="placement informer" />
+=======
+              <option name="myItemId" value="PlacementInformer 0.0.1" />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -194,7 +291,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="placement informer" />
+=======
+              <option name="myItemId" value="PlacementInformer 0.0.1" />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -202,6 +303,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="wplab-placement finalise this AKASH" />
@@ -238,6 +340,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+=======
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -246,6 +350,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
@@ -254,6 +359,8 @@
       <recent name="$PROJECT_DIR$/IN" />
       <recent name="$PROJECT_DIR$/IN/php" />
     </key>
+=======
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -278,7 +385,16 @@
       <envs />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+=======
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
       <method />
     </configuration>
     <list size="0" />
@@ -297,7 +413,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="24" width="1280" height="776" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -305,9 +425,14 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25546876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25549048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -339,13 +464,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../wp/IN/home-pc.php">
+    <entry file="file://$PROJECT_DIR$/IN/studentHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9044">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10506">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -355,7 +482,91 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1413966123784" expanded="true" signature="-1:-1" placeholder="SELECT STUNA..STUDENT..." />
+=======
+            <marker date="1413964873363" expanded="true" signature="2663:2708" placeholder="SELECT name ..student..." />
+            <marker date="1413964873363" expanded="true" signature="2924:2970" placeholder="SELECT email..student..." />
+            <marker date="1413964873363" expanded="true" signature="3185:3229" placeholder="SELECT usn F..student..." />
+            <marker date="1413964873363" expanded="true" signature="3445:3492" placeholder="SELECT branc..student..." />
+            <marker date="1413964873363" expanded="true" signature="3709:3754" placeholder="SELECT cgpa ..student..." />
+            <marker date="1413964873363" expanded="true" signature="3984:4037" placeholder="SELECT tenth..student..." />
+            <marker date="1413964873363" expanded="true" signature="4274:4328" placeholder="SELECT twelt..student..." />
+            <marker date="1413964873363" expanded="true" signature="4555:4601" placeholder="SELECT phone..student..." />
+            <marker date="1413964873363" expanded="true" signature="8237:8284" placeholder="SELECT branc..student..." />
+            <marker date="1413964873363" expanded="true" signature="8660:8825" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="8914:8961" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9099:9205" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9169:9205" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="9241:9269" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9445:9502" placeholder="SELECT * FRO..dateofvisit..." />
+            <marker date="1413964873363" expanded="false" signature="9594:9622" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9809:9865" placeholder="SELECT * FRO..jobprofile..." />
+            <marker date="1413964873363" expanded="false" signature="9961:9989" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10128:10161" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10163:10191" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10315:10348" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10350:10378" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10502:10538" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10540:10568" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10696:10725" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10727:10755" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10879:10911" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10913:10941" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="11069:11109" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="11111:11139" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="11326:11388" placeholder="SELECT * FRO..brancheseligible..." />
+            <marker date="1413964873363" expanded="true" signature="11484:11512" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="12043:12276" placeholder="SELECT * FRO..student..." />
+            <marker date="1413964873363" expanded="true" signature="13205:13252" placeholder="SELECT branc..student..." />
+            <marker date="1413964873363" expanded="true" signature="13399:13564" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="14065:14175" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="14139:14175" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="14207:14235" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="14404:14461" placeholder="SELECT * FRO..dateofvisit..." />
+            <marker date="1413964873363" expanded="false" signature="14553:14581" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="14768:14824" placeholder="SELECT * FRO..jobprofile..." />
+            <marker date="1413964873363" expanded="false" signature="14920:14948" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15089:15122" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15124:15152" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15279:15312" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15314:15342" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15467:15503" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15505:15533" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15662:15691" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15693:15721" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15846:15878" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15880:15908" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="16031:16071" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="16073:16101" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="16290:16352" placeholder="SELECT * FRO..brancheseligible..." />
+            <marker date="1413964873363" expanded="false" signature="16448:16476" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="17000:17233" placeholder="SELECT * FRO..student..." />
+            <marker date="1413964873363" expanded="true" signature="17835:18053" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="17952:18052" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="18491:18600" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="18564:18600" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="18632:18660" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="18830:18887" placeholder="SELECT * FRO..dateofvisit..." />
+            <marker date="1413964873363" expanded="false" signature="18979:19007" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19194:19250" placeholder="SELECT * FRO..jobprofile..." />
+            <marker date="1413964873363" expanded="false" signature="19346:19374" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19514:19547" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="19549:19577" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19706:19739" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="19741:19769" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19893:19929" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="19931:19959" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20088:20117" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="20119:20147" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20272:20304" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="20306:20334" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20457:20497" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="20499:20527" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20716:20778" placeholder="SELECT * FRO..brancheseligible..." />
+            <marker date="1413964873363" expanded="false" signature="20874:20902" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="21423:21656" placeholder="SELECT * FRO..student..." />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
           </folding>
         </state>
       </provider>
@@ -391,6 +602,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IN/home-pc.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.19773096" vertical-offset="5038" max-vertical-offset="7800">
           <caret line="344" column="77" selection-start-line="344" selection-start-column="77" selection-end-line="344" selection-end-column="77" />
           <folding>
@@ -404,6 +616,10 @@
             <marker date="1413976688001" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1413976688001" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
+=======
+        <state vertical-scroll-proportion="15.743069" vertical-offset="0" max-vertical-offset="8704">
+          <caret line="501" column="30" selection-start-line="501" selection-start-column="30" selection-end-line="501" selection-end-column="30" />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
         </state>
       </provider>
     </entry>
@@ -425,6 +641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IN/studentHome.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0931677" vertical-offset="5115" max-vertical-offset="9300">
           <caret line="345" column="12" selection-start-line="345" selection-start-column="12" selection-end-line="345" selection-end-column="12" />
           <folding>
@@ -484,6 +701,99 @@
             <marker date="1413982161716" expanded="true" signature="20400:20462" placeholder="SELECT * FRO..brancheseligible..." />
             <marker date="1413982161716" expanded="false" signature="20558:20586" placeholder="..." />
             <marker date="1413982161716" expanded="true" signature="21149:21382" placeholder="SELECT * FRO..student..." />
+=======
+        <state vertical-scroll-proportion="0.9560633" vertical-offset="0" max-vertical-offset="833">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IN/studentHome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6274165" vertical-offset="8347" max-vertical-offset="10761">
+          <caret line="512" column="26" selection-start-line="512" selection-start-column="26" selection-end-line="512" selection-end-column="26" />
+          <folding>
+            <marker date="1413964873363" expanded="true" signature="2663:2708" placeholder="SELECT name ..student..." />
+            <marker date="1413964873363" expanded="true" signature="2924:2970" placeholder="SELECT email..student..." />
+            <marker date="1413964873363" expanded="true" signature="3185:3229" placeholder="SELECT usn F..student..." />
+            <marker date="1413964873363" expanded="true" signature="3445:3492" placeholder="SELECT branc..student..." />
+            <marker date="1413964873363" expanded="true" signature="3709:3754" placeholder="SELECT cgpa ..student..." />
+            <marker date="1413964873363" expanded="true" signature="3984:4037" placeholder="SELECT tenth..student..." />
+            <marker date="1413964873363" expanded="true" signature="4274:4328" placeholder="SELECT twelt..student..." />
+            <marker date="1413964873363" expanded="true" signature="4555:4601" placeholder="SELECT phone..student..." />
+            <marker date="1413964873363" expanded="true" signature="8237:8284" placeholder="SELECT branc..student..." />
+            <marker date="1413964873363" expanded="true" signature="8660:8825" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="8914:8961" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9099:9205" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9169:9205" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="9241:9269" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9445:9502" placeholder="SELECT * FRO..dateofvisit..." />
+            <marker date="1413964873363" expanded="false" signature="9594:9622" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="9809:9865" placeholder="SELECT * FRO..jobprofile..." />
+            <marker date="1413964873363" expanded="false" signature="9961:9989" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10128:10161" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10163:10191" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10315:10348" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10350:10378" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10502:10538" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10540:10568" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10696:10725" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10727:10755" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="10879:10911" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="10913:10941" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="11069:11109" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="11111:11139" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="11326:11388" placeholder="SELECT * FRO..brancheseligible..." />
+            <marker date="1413964873363" expanded="true" signature="11484:11512" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="12043:12276" placeholder="SELECT * FRO..student..." />
+            <marker date="1413964873363" expanded="true" signature="13205:13252" placeholder="SELECT branc..student..." />
+            <marker date="1413964873363" expanded="true" signature="13399:13564" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="14065:14175" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="14139:14175" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="14207:14235" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="14404:14461" placeholder="SELECT * FRO..dateofvisit..." />
+            <marker date="1413964873363" expanded="false" signature="14553:14581" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="14768:14824" placeholder="SELECT * FRO..jobprofile..." />
+            <marker date="1413964873363" expanded="false" signature="14920:14948" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15089:15122" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15124:15152" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15279:15312" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15314:15342" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15467:15503" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15505:15533" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15662:15691" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15693:15721" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="15846:15878" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="15880:15908" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="16031:16071" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="16073:16101" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="16290:16352" placeholder="SELECT * FRO..brancheseligible..." />
+            <marker date="1413964873363" expanded="false" signature="16448:16476" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="17000:17233" placeholder="SELECT * FRO..student..." />
+            <marker date="1413964873363" expanded="true" signature="17835:18053" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="17952:18052" placeholder="SELECT disti..company..." />
+            <marker date="1413964873363" expanded="true" signature="18491:18600" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="18564:18600" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="18632:18660" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="18830:18887" placeholder="SELECT * FRO..dateofvisit..." />
+            <marker date="1413964873363" expanded="false" signature="18979:19007" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19194:19250" placeholder="SELECT * FRO..jobprofile..." />
+            <marker date="1413964873363" expanded="false" signature="19346:19374" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19514:19547" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="19549:19577" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19706:19739" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="19741:19769" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="19893:19929" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="19931:19959" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20088:20117" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="20119:20147" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20272:20304" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="20306:20334" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20457:20497" placeholder="..." />
+            <marker date="1413964873363" expanded="false" signature="20499:20527" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="20716:20778" placeholder="SELECT * FRO..brancheseligible..." />
+            <marker date="1413964873363" expanded="false" signature="20874:20902" placeholder="..." />
+            <marker date="1413964873363" expanded="true" signature="21423:21656" placeholder="SELECT * FRO..student..." />
+>>>>>>> 7fe9a1bbf4d101799bdfb8242f836f911c69a32b
           </folding>
         </state>
       </provider>

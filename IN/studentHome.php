@@ -57,9 +57,9 @@ header('Location: ../');
 <body>
 
 <!--    <div id="wrapper" class="toggled">
-	
 
-        
+
+
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -129,7 +129,7 @@ header('Location: ../');
                 <li>
                     10th % -
 					<?php
-					
+
 						$result = mysqli_query($con,"SELECT tenthPercent FROM student where USN = '$uname';");
 						while($db_field=mysqli_fetch_assoc($result))
 						{
@@ -160,38 +160,38 @@ header('Location: ../');
                 <li>
                     <a href="#">Update?</a>
                 </li>
-                
+
             </ul>
         </div>-->
-        <!-- /#sidebar-wrapper 
+        <!-- /#sidebar-wrapper
 		<div id="page-content-wrapper">
--->        
+-->
 		<div class="navbar navbar-inverse" >
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button> 
-			<!--	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
-                    <span class="genericon genericon-menu"></span>
-                </a>-->
-			<!--	<div alt="f419" class="genericon genericon-menu"></div>
-        -->
-           <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle" class="img-responsive" id="logo"></a>
-		
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <!--	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
+                        <span class="genericon genericon-menu"></span>
+                    </a>-->
+                <!--	<div alt="f419" class="genericon genericon-menu"></div>
+            -->
+               <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle" class="img-responsive" id="logo"></a>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="edit-profile.php" >Edit Profile</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
+                        <li><a href="php/logout.php">Logout</a></li>
+
+                    </ul>
+                </div>
+
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="edit-profile.php" >Edit Profile</a></li>
-                    <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
-                    <li><a href="php/logout.php">Logout</a></li>
-                    
-                </ul>
-            </div>
-           
-        </div>
         </div>
 	<!--	</div>-->
         
@@ -261,6 +261,7 @@ header('Location: ../');
 		
 		<?php
 		$result = mysqli_query($con,"SELECT branch FROM student where USN = '$uname';");
+        //echo $result;
 		$date = date('Y-m-d');
 		
 		$db_field=mysqli_fetch_assoc($result);
@@ -340,7 +341,7 @@ header('Location: ../');
 			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'"); 
 			while($db_field_branch=mysqli_fetch_assoc($resultBranches))
 			{
-				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['BRANCH'].", "."</span>";
+				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
 			}
 			echo "</div>";
 
@@ -391,8 +392,15 @@ header('Location: ../');
         $result = mysqli_query($con,"SELECT distinct c.* FROM company as c,dateofvisit as d, brancheseligible as b where c.NAME = d.name and c.name = b.name and d.date > '$date' and b.branch = '$branch';");
 
         //$result = mysqli_query($con,"SELECT * FROM company where name in (select b.name from dateofvisit as d , brancheseligible as b where d.date > curdate() and b.branch = '$branch' )");
-		
-		
+
+        if(mysqli_num_rows($result)==0)
+        {
+            echo "<div class=\"container-fluid col\" >";
+            echo "No Upcoming Companies";
+            echo "</div>";
+
+        }
+
 		while($db_field=mysqli_fetch_assoc($result))
 		{
 			//print_r($db_field);
@@ -457,7 +465,7 @@ header('Location: ../');
 			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'"); 
 			while($db_field_branch=mysqli_fetch_assoc($resultBranches))
 			{
-				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['BRANCH'].", "."</span>";
+				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
 			}
 			echo "</div>";
 
@@ -495,8 +503,15 @@ header('Location: ../');
         $result = mysqli_query($con,"SELECT distinct c.* FROM company as c,dateofvisit as d where c.NAME = d.name and d.date < '$date' and c.name not IN (SELECT distinct c.name FROM company as c,dateofvisit as d where c.NAME = d.name and d.date > '$date');");
 
         //$result = mysqli_query($con,"SELECT * FROM company where name in (select name from dateofvisit where date < curdate())");
-		
-		
+
+        if(mysqli_num_rows($result)==0)
+        {
+            echo "<div class=\"container-fluid col\" >";
+            echo "No Past Companies";
+            echo "</div>";
+
+        }
+
 		while($db_field=mysqli_fetch_assoc($result))
 		{
 			//print_r($db_field);
@@ -560,7 +575,7 @@ header('Location: ../');
 			$resultBranches = mysqli_query($con,"SELECT * FROM brancheseligible where NAME = '".$companyName."'"); 
 			while($db_field_branch=mysqli_fetch_assoc($resultBranches))
 			{
-				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['BRANCH'].", "."</span>";
+				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['branch'].", "."</span>";
 			}
 			echo "</div>";
 		
