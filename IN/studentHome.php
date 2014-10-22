@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-
+require('php/obtainfiles.php');
 // Initialize session
 session_start();
 
@@ -344,14 +344,11 @@ header('Location: ../');
 			}
 			echo "</div>";
 
-
-
-		
 			
-		/*echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\">Attachments:</div>
+		echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\">Attachments:</div>
 		<div class=\"col-md-3 col-sm-6 col-lg-3 col-xs-12 each1\"></div>
-		<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each1\"></div>";*/
-		
+		<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each1\"></div>";
+		obtainfiles($companyName);
 			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'"); 
 			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	twelthPercent > ".$db_field['PUCCUTOFF']." and diplomapercent > ".$db_field['DIPLOMACUTOFF'].") ");
 			$numRows = mysqli_num_rows($resultEligibility);
@@ -463,12 +460,13 @@ header('Location: ../');
 				echo "<span style='color:blue;margin-left:10px;'>".$db_field_branch['BRANCH'].", "."</span>";
 			}
 			echo "</div>";
-		
 
-			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\">Attachments:</div>
+
+           echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\">Attachments:</div>
 			<div class=\"col-md-3 col-sm-6 col-lg-3 col-xs-12 each1\"></div>
 			<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each1\"></div>";
-		
+            obtainfiles($companyName);
+
 			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'"); 
 			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	twelthPercent > ".$db_field['PUCCUTOFF']." and diplomapercent > ".$db_field['DIPLOMACUTOFF'].") ");
 			$numRows = mysqli_num_rows($resultEligibility);
@@ -570,16 +568,20 @@ header('Location: ../');
 			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\">Attachments:</div>
 			<div class=\"col-md-3 col-sm-6 col-lg-3 col-xs-12 each1\"></div>
 			<div class=\"col-md-4 col-sm-6 col-lg-4 col-xs-12 each1\"></div>";
+
+            obtainfiles($companyName);
+
+
 			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'"); 
 			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	twelthPercent > ".$db_field['PUCCUTOFF']." and diplomapercent > ".$db_field['DIPLOMACUTOFF'].") ");
 			$numRows = mysqli_num_rows($resultEligibility);
 			if($numRows!=0)
 			{
-			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\"> <button type=\"button\" class=\"btn btn-success\">Was Eligible</button></div>";
+			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\"> <button type=\"button\" disabled=\"disabled\"  class=\"btn btn-success\">Was Eligible</button></div>";
 			}
 			else
 			{
-			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\"> <button type=\"button\" class=\"btn btn-danger\">Was not eligible</button></div>";
+			echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\"> <button type=\"button\" disabled=\"disabled\" class=\"btn btn-danger\">Was not eligible</button></div>";
 			}
 			echo "</div>";
 		}

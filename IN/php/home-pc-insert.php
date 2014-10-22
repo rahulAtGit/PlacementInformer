@@ -4,6 +4,7 @@ error_reporting(0);
 
 
 require_once('dbconnector.php');
+require('uploadfiles.php');
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 
@@ -17,28 +18,25 @@ $ctwelth = $_POST['ctwelth'];
 $cdiploma= $_POST['cdiploma'];
 $cdeadline= $_POST['cdeadline'];
 //echo $cdeadline;
+$r = uploadfiles($cname);
+echo $r;
+if($r == 1) {
 
-$result1 = $mysqli->query("INSERT INTO `company` (`NAME`, `PACKAGE`, `GPACUTOFF`, `TENTHCUTOFF`, `PUCCUTOFF`, `DIPLOMACUTOFF`, `lastDateReg`) VALUES ('$cname', '$cpackage', '$ccgpa', '$ctenth', '$ctwelth', '$cdiploma','$cdeadline');");
 
-$result2 = $mysqli->query("INSERT INTO jobprofile (`NAME`, `PROFILE`) VALUES ('$cname', '$cjob');");
+    $result1 = $mysqli->query("INSERT INTO `company` (`NAME`, `PACKAGE`, `GPACUTOFF`, `TENTHCUTOFF`, `PUCCUTOFF`, `DIPLOMACUTOFF`, `lastDateReg`) VALUES ('$cname', '$cpackage', '$ccgpa', '$ctenth', '$ctwelth', '$cdiploma','$cdeadline');");
 
-$result3 = $mysqli->query("INSERT INTO `dateofvisit` (`NAME`, `DATE`) VALUES ('$cname', '$cdate');");
+    $result2 = $mysqli->query("INSERT INTO jobprofile (`NAME`, `PROFILE`) VALUES ('$cname', '$cjob');");
 
-foreach($_POST['cbranches'] as $selected){
-    $result4 = $mysqli->query("INSERT INTO `brancheseligible` (`NAME`, `BRANCH`) VALUES ('$cname', '$selected');");
+    $result3 = $mysqli->query("INSERT INTO `dateofvisit` (`NAME`, `DATE`) VALUES ('$cname', '$cdate');");
+
+    foreach ($_POST['cbranches'] as $selected) {
+        $result4 = $mysqli->query("INSERT INTO `brancheseligible` (`NAME`, `BRANCH`) VALUES ('$cname', '$selected');");
+    }
+
+
+    echo "Done";
+
 }
-
-/*
- * convert files to pdf
- * move files to uploads folder in server.
- * rename file
- *
- * */
-
-
-echo "Done";
-
-
 
 
 ?>

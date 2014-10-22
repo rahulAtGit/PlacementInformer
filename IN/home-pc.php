@@ -342,25 +342,25 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 								</div>
 						<!-- File Button -->
 						<div class="form-group">
-						  <label class="col-md-4 control-label" for="cattach1">Attachement1</label>
+						  <label class="col-md-4 control-label" for="userfile">Attachement1</label>
 						  <div class="col-md-4">
-							<input id="cattach1" name="cattach1" class="input-file" type="file">
+							<input id="cattach1" name="userfile" class="input-file" type="file">
 						  </div>
 						</div>
 
 						<!-- File Button -->
 						<div class="form-group">
-						  <label class="col-md-4 control-label" for="cattach1">Attachment2</label>
+						  <label class="col-md-4 control-label" for="userfile2">Attachment2</label>
 						  <div class="col-md-4">
-							<input id="cattach1" name="cattach1" class="input-file" type="file">
+							<input id="cattach1" name="userfile2" class="input-file" type="file">
 						  </div>
 						</div>
 
 						<!-- File Button -->
 						<div class="form-group">
-						  <label class="col-md-4 control-label" for="cattach">Attachment3</label>
+						  <label class="col-md-4 control-label" for="userfile3">Attachment3</label>
 						  <div class="col-md-4">
-							<input id="cattach" name="cattach" class="input-file" type="file">
+							<input id="cattach" name="userfile3" class="input-file" type="file">
 						  </div>
 						</div>
 
