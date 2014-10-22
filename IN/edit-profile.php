@@ -43,6 +43,8 @@
 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 vcentre">
 
 <br/>
+
+<br/>
 <div class="col-lg-offset-5 col-md-offset-5 logo">
 	<img src="images/logo.png">
 </div>
@@ -51,7 +53,7 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Sign up</legend>
+<legend>Profile</legend>
 
 <!-- Text input-->
 <div class="form-group">
@@ -70,6 +72,7 @@
     
   </div>
 </div>
+
 
 <div class="form-group">
   <label class="col-md-4 control-label" for="phone">Phone No</label>  
@@ -116,22 +119,6 @@
 </div>
 
 <!-- Password input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="password">Password</label>
-  <div class="col-md-5">
-    <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Password input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="confirmpass">Confirm Password</label>
-  <div class="col-md-5">
-    <input id="confirmpass" name="confirmpass" type="password" placeholder="Confirm Password" class="form-control input-md">
-    
-  </div>
-</div>
 
 <!-- Button -->
 <div class="form-group">
