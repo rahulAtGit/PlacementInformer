@@ -1,0 +1,40 @@
+Things which need to be done
+
+-work on the design and completely responsive
+-edit details page
+-date display(edit the format)
+-branches- drop down menu
+-attachments
+-student registrations(signup)
+-student registering for the company(make the apply button work)
+-change password+forgot password
+-mail+sms
+-loading more companies
+-search functionality
+-PC excel sheet generation
+-Timer in the student page
+-Company description page
+-Admin page
+-Notifications
+- refining login by adding encryption to passwords
+- add a common file for sessions.
+- should fill the contents in edit profile page
+
+things done-
+
+
+
+------------------------------------Rahul's writings-------------------------------------------------------------------------------------------------------
+* Akash Add forgot password in pc home page
+* Also Akash change d last date for registration format
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------Akash's writings-------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------Ramu's writings-------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+

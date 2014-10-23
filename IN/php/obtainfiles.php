@@ -16,7 +16,7 @@ function obtainfiles($cname)
         echo 'No Attachments Available';
     foreach ($r1 as $key => $value) {
         $name = end(explode('_',$value));
-        echo '<a href="http://localhost/placement informer/IN/uploads/' . $value . '">' . $name . '</a>';
+        echo '<a href="../IN/uploads/' . $value . '">' . $name . '</a>';
         echo '<br>';
     }
 }

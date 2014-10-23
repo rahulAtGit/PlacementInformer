@@ -391,8 +391,16 @@ header('Location: ../');
 
         //$result = mysqli_query($con,"SELECT * FROM company where name in (select b.name from dateofvisit as d , brancheseligible as b where d.date > curdate() and b.branch = '$branch' )");
 
+        if(mysqli_num_rows($result)==0)
+        {
+            echo "<div class=\"container-fluid col\" >";
+            echo "No Upcoming Companies";
+            echo "</div>";
 
-		while($db_field=mysqli_fetch_assoc($result))
+        }
+
+
+        while($db_field=mysqli_fetch_assoc($result))
 		{
 			//print_r($db_field);
 			echo "<div class=\"container-fluid\" >";
@@ -496,6 +504,13 @@ header('Location: ../');
 
         //$result = mysqli_query($con,"SELECT * FROM company where name in (select name from dateofvisit where date < curdate())");
 
+        if(mysqli_num_rows($result)==0)
+        {
+            echo "<div class=\"container-fluid col\" >";
+            echo "No Past Companies";
+            echo "</div>";
+
+        }
 
 		while($db_field=mysqli_fetch_assoc($result))
 		{
