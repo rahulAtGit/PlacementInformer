@@ -330,7 +330,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
 						<div class="form-group">
 							<label for="dtp_input1" class="col-md-4 control-label" for="cdeadline">Deadline</label>
-							<div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+							<div class="input-group date form_datetime col-md-5"  data-date-format="yyyy-mm-dd HH:ii:ss " data-link-field="dtp_input1">
 								<input name="cdeadline" id = "cdeadline" class="form-control input-md" size="16" type="text" readonly>
 								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
 							</div>

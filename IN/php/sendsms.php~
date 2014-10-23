@@ -1,0 +1,28 @@
+<?php 
+error_reporting(E_ALL);
+/**
+ * @author Kingster
+ * @category SMS
+ * @copyright 2011
+ * @description Request this page with get or post params
+ * @param uid = Way2SMS Username
+ * @param pwd = Way2SMS Password
+ * @param phone = Number to send to. Multiple Numbers separated by comma (,). 
+ * @param msg = Your Message ( Upto 160 Chars)
+ */
+
+require('way2sms-api.php');
+session_start();
+
+// Check, if username session is NOT set then this page will jump to login page
+if ((!isset($_SESSION['username']))||(!isset($_SESSION['password']) )){
+    header('Location: ../..');
+}
+
+
+
+$r = sendWay2SMS('9482122451', 'Ramesh64','9482122451','Happy Deepavali');
+print_r($r);
+
+
+?>

@@ -5,6 +5,7 @@ error_reporting(0);
 
 require_once('dbconnector.php');
 require('uploadfiles.php');
+require('sendmail2people.php');
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 
@@ -33,7 +34,14 @@ if($r == 1) {
         $result4 = $mysqli->query("INSERT INTO `brancheseligible` (`NAME`, `BRANCH`) VALUES ('$cname', '$selected');");
     }
 
-
+    $result5=$mysqli->query("select * from student where CGPA >= '$cgpa' and tenthPercent >='$ctenth' and (twelthPercent >='$ctwelth' or diplomaPercent >= '$cdiploma')");
+    $body = "Incoming Company ".$cname."Package : ".$cpackage."Visit the site for more details";
+    while($ar=mysqli_fetch_assoc($result5))
+    {
+        $em = $ar['EMAIL'];
+        echo $em;
+        sendmail($em,'Student', 'Incoming Company',$body);
+    }
     echo "Done";
 
 }

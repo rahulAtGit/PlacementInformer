@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 /**
  * Created by PhpStorm.
  * User: ramu
@@ -73,23 +74,10 @@ function sendmail($toemailid,$name, $subject, $body)
     } else {
         echo "Message sent!";
     }
-    var_dump($mail);
-}
-
-
-//subject
-$subject = "Test mail";
-$body = "<html>            <head>                <h3>Test Mail</h3>         <style>                    body                    {                        background-color: #111111;                    }                    p                    {                        color: #0e90d2;                    }                </style>      </head>            <body>                             <p>                    This is a test mail. I have made a function which sends mail and I'm now sending from it.                </p>            </body>         </html>";
-//getting to addresses from database
-$result = mysqli_query($mysqli,"SELECT STUNAME,EMAIL FROM STUDENT WHERE 1;");
-var_dump($result);
-echo mysqli_num_rows($result);
-for($i=0; $i<mysqli_num_rows($result);$i++)
-{
-    $row= mysqli_fetch_row($result);
-    sendmail($row[1],$row[0],$subject,$body);
-    mysqli_next_result($mysqli);
-    echo $row[1].'\n';
+    ?><pre>
+    <?php var_dump($mail);?>
+    </pre>
+<?
 }
 
 

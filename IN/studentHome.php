@@ -467,11 +467,12 @@ header('Location: ../');
             obtainfiles($companyName);
 
 			//$resultEligibility = mysqli_query($con,"SELECT * FROM student where NAME = '".$uname."' and branch in (select branch	from brancheseligible where NAME = '".$companyName."'");
-			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	twelthPercent > ".$db_field['PUCCUTOFF']." and diplomapercent > ".$db_field['DIPLOMACUTOFF'].") ");
+			$resultEligibility = mysqli_query($con,"SELECT * FROM student where (USN = '".$uname."' and CGPA > ".$db_field['GPACUTOFF']." and tenthPercent > ".$db_field['TENTHCUTOFF']." and	(twelthPercent > ".$db_field['PUCCUTOFF']." or diplomapercent > ".$db_field['DIPLOMACUTOFF'].")) ");
 			$numRows = mysqli_num_rows($resultEligibility);
 			if($numRows!=0)
 			{
-				echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\"> <button type=\"button\" class=\"btn btn-success\">Register</button></div>";
+                $url="php/applytocompany.php?cname=".$companyName;
+				echo "<div class=\"col-md-2 col-sm-6 col-lg-2 col-xs-12 each1\"> <a type=\"button\" class=\"btn btn-success\" href='".$url."'>Register</a></div>";
 			}
 			else
 			{
