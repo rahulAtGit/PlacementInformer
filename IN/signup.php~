@@ -101,19 +101,12 @@
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="branch">Branch</label>
+                <label class="" for="branch">Branch</label>
                     <!-- -->
-                <div class="col-md-5">
-                    <select id="branch" name="branch" class="form-control t">
-                        <?php
-                        require_once('php/dbconnector.php');
-                        $result = mysqli_query($con, "select * from branches;");
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            ?>
-                            <option ><?php echo $row['branch']; ?></option>
-                        <?php } ?>
+
+                    <select id="branch" name="branch" class="form-control ">
+                        hdbgvjhvhdbv
                     </select>
-                    </div>
             </div>
 
             <div class="form-group">

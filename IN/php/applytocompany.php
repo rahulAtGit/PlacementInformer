@@ -28,14 +28,14 @@ if ($mysqli->connect_errno) {
 $nameofcomp = $_GET['cname'];
 $usn = $_SESSION['username'];
 
+
 //checking duplicate entries
-$r0 = mysqli_query($mysqli,"SELECT * FROM applied WHERE USN='$usn'");
-echo $r0->num_rows();
-/*if($r0->num_rows() !=0 )
-{
-    echo 'You have already registered for the company.';
-}
-*/
+$r0 = mysqli_query($mysqli,"SELECT * FROM applied WHERE USN='$usn' and NAME = '$nameofcomp'");
+//print_r($r0);
+$c0 = mysqli_fetch_array($r0, MYSQLI_ASSOC);
+//print_r($c0);
+
+if(mysqli_num_rows($r0)==0 ){
 
 //eligibility check of the student
     $r1 = mysqli_query($mysqli, "SELECT * FROM student WHERE USN='$usn'");
@@ -44,7 +44,7 @@ echo $r0->num_rows();
     $ca = mysqli_fetch_array($r2, MYSQLI_ASSOC);
 
     $date = date('Y-m-d H:i:s');
-echo $date;
+  //  echo $date;
     if ($ca['lastDateReg'] > $date) {
         if ($ca['GPACUTOFF'] <= $sa['CGPA'] && $sa['tenthPercent'] >= $ca['TENTHCUTOFF'] && (($ca['PUCCUTOFF'] <= $sa['twelthPercent']) || ($ca['DIPLOMACUTOFF'] <= $sa['diplomaPercent']))) {
 //Inserting into the company
@@ -63,10 +63,15 @@ echo $date;
         }
 
     } else {
-        echo 'Error : You have crossed the deadline. ';
+        echo 'Error : You have crossed the deadline. Please contact your placement coordinator.';
     }
 
 
+}
+else
+{
+    echo 'You have already registered. Why do it again?';
+}
 
 
 ?>

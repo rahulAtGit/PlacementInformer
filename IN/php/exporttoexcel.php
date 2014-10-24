@@ -18,7 +18,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password']) )){
 
 $host="localhost"; // Host name or server name
 $username="root"; // Mysql username
-$password="admin"; // Mysql password
+$password=""; // Mysql password
 $db_name="placementinformer"; // Database name
 
 $con = mysqli_connect("$host", "$username", "$password","$db_name");
