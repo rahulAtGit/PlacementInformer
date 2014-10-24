@@ -72,7 +72,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
             <div id="body-content">
             <div class="a col-xs-10 col-sm-6 col-xs-offset-1 col-sm-offset-2 col-lg-offset-1 col-md-offset-1 col-md-4 col-lg-4 ">
-<form class="form-horizontal">
+<form class="form-horizontal"  name ="register-thro-excel" enctype="multipart/form-data" method ="post" id ="register-thro-excel" action = "<?php echo htmlspecialchars('php/register-thro-excel.php');?>">
 <fieldset>
 
 <!-- Form Name -->
@@ -103,7 +103,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
             <div id="body-content">
             <div class="a col-xs-10 col-sm-6 col-xs-offset-1 col-sm-offset-2 col-lg-offset-1 col-md-offset-1 col-md-4 col-lg-4 ">
-<form class="form-horizontal">
+<form class="form-horizontal" name ="register-thro-form" enctype="multipart/form-data" method ="post" id ="register-thro-form" action = "<?php echo htmlspecialchars('php/register-thro-form.php');?>">
 <fieldset>
 
 <!-- Form Name -->

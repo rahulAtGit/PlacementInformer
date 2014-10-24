@@ -1,3 +1,55 @@
+<?php
+
+
+$mysqli = new mysqli("localhost", "root", "", "placementinformer"); // put "" for the password if you want to run them
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+
+$passkey=$_GET['passkey'];
+$tbl_name="temp";
+
+// Retrieve data from table where row that match this passkey 
+$sql="SELECT * FROM $tbl_name WHERE code ='$passkey'";
+$result=mysqli_query($mysqli,$sql);
+
+if($result){
+
+// Count how many row has this passkey
+$count=mysqli_num_rows($result);
+
+// if found this passkey in our database, retrieve data from table "temp_members_db"
+if($count==1){
+
+$rows=mysqli_fetch_array($result, MYSQLI_ASSOC);
+$name=$rows['name'];
+$email=$rows['email'];
+$usn=$rows['usn'];
+//$tbl_name2="";
+
+// Insert data that retrieves from "temp_members_db" into table "registered_members" 
+//$sql2="INSERT INTO $tbl_name2(name, email, password, country)VALUES('$name', '$email', '$password', '$country')";
+//$result2=mysql_query($sql2);
+/*
+// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
+if($result2){
+
+echo "Your account has been activated";
+
+// Delete information of this user from table "temp_members_db" that has this passkey 
+$sql3="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";
+$result3=mysql_query($sql3);
+
+}
+*/
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -57,7 +109,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="usn">USN</label>
                 <div class="col-md-5">
-                    <input id="usn" name="usn" type="text" placeholder="USN" class="form-control input-md">
+                    <input readonly id="usn" name="usn" type="text" placeholder="USN" class="form-control input-md" value='<?php echo "{$usn}"?>'>
 
                 </div>
             </div>
@@ -66,7 +118,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="name">Name</label>
                 <div class="col-md-5">
-                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" value='<?php echo "{$name}"?>'>
 
                 </div>
             </div>
@@ -75,7 +127,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="email">Email id</label>
                 <div class="col-md-5">
-                    <input id="email" name="email" type="text" placeholder="Email id" class="form-control input-md">
+                    <input id="email" name="email" type="text" placeholder="Email id" class="form-control input-md" value='<?php echo "{$email}"?>'>
 
                 </div>
             </div>
@@ -191,3 +243,13 @@
 </body>
 
 </html>
+
+<?php
+}
+
+// if not found passkey, display message "Wrong Confirmation code" 
+else {
+echo "Wrong Confirmation code";
+}
+}
+?>
