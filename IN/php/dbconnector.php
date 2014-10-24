@@ -8,7 +8,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password']) )){
     header('Location: ../..');
 }
 */
-$mysqli = new mysqli("localhost", "root", "", "placementinformer"); // put "" for the password if you want to run them
+$con = $mysqli = new mysqli("localhost", "root", "", "placementinformer"); // put "" for the password if you want to run them
 /* check connection */
 if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);

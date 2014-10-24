@@ -49,18 +49,44 @@
 	<img src="images/logo.png">
 </div>
 
-<form class="form-horizontal">
+<form class="form-horizontal" name = "edit-profile" method = "post" id = "edit-profile" action = "<?php echo htmlspecialchars('php/edit-profile-insert.php');?>">
 <fieldset>
+
+    <?php
+    require_once('php/dbconnector.php');
+    session_start();
+    $uname =  $_SESSION['userNameT'];
+
+    ?>
 
 <!-- Form Name -->
 <legend>Profile</legend>
 
 <!-- Text input-->
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="usn">USN</label>
+        <div class="col-md-5">
+            <?php
+            $result = mysqli_query($con,"SELECT usn FROM student where USN = '$uname';");
+            while($db_field=mysqli_fetch_assoc($result))
+            {
+                echo "<input id=\"usn\" name=\"usn\" type=\"text\"  value = " . $db_field['usn']  . "  class=\"form-control input-md\">";
+            }
+
+            ?>
+        </div>
+    </div>
+
 <div class="form-group">
   <label class="col-md-4 control-label" for="name">Name</label>  
   <div class="col-md-5">
-  <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-    
+      <?php
+      $result = mysqli_query($con,"SELECT name FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result)) {
+          echo "<input id=\"name\" name=\"name\" type=\"text\" value = " . $db_field['name'] . " class=\"form-control input-md\">";
+      }
+    ?>
   </div>
 </div>
 
@@ -68,16 +94,41 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="email">Email id</label>  
   <div class="col-md-5">
-  <input id="email" name="email" type="text" placeholder="Email id" class="form-control input-md">
-    
+      <?php
+      $result = mysqli_query($con,"SELECT email FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result))
+      {
+          echo "<input id=\"email\" name=\"email\" type=\"text\" value = " . $db_field['email'] . " class=\"form-control input-md\">";
+      }
+      ?>
   </div>
 </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="branch">Branch</label>
+        <div class="col-md-5">
+            <?php
+            $result = mysqli_query($con,"SELECT branch FROM student where USN = '$uname';");
+            while($db_field=mysqli_fetch_assoc($result))
+            {
+                echo "<input id=\"branch\" name=\"branch\" type=\"text\" value = ". $db_field['branch'] . " class=\"form-control input-md\">";
+            }
+            ?>
+        </div>
+    </div>
 
 
 <div class="form-group">
   <label class="col-md-4 control-label" for="phone">Phone No</label>  
   <div class="col-md-5">
-  <input id="phone" name="phone" type="text" placeholder="Phone No" class="form-control input-md">
+      <?php
+      $result = mysqli_query($con,"SELECT phone FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result))
+      {
+          echo "<input id=\"phone\" name=\"phone\" type=\"text\" value = " . $db_field['phone'] . " class=\"form-control input-md\">";
+      }
+      ?>
+
     
   </div>
 </div>
@@ -86,7 +137,13 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="tenth">10th %</label>  
   <div class="col-md-2">
-  <input id="tenth" name="tenth" type="text" placeholder="" class="form-control input-md">
+      <?php
+      $result = mysqli_query($con,"SELECT tenthPercent FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result))
+      {
+          echo "<input id=\"tenth\" name=\"tenth\" type=\"text\" value = ". $db_field['tenthPercent'] . " class=\"form-control input-md\">";
+      }
+      ?>
     
   </div>
 </div>
@@ -95,7 +152,14 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="twelfth">12th % (N/A)</label>  
   <div class="col-md-2">
-  <input id="twelfth" name="twelfth" type="text" placeholder="" class="form-control input-md">
+      <?php
+      $result = mysqli_query($con,"SELECT twelthPercent FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result))
+      {
+          echo "<input id=\"twelfth\" name=\"twelfth\" type=\"text\" value = ". $db_field['twelthPercent'] . " class=\"form-control input-md\">";
+      }
+      ?>
+
     
   </div>
 </div>
@@ -104,7 +168,14 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="diploma">Diploma % (N/A)</label>  
   <div class="col-md-2">
-  <input id="diploma" name="diploma" type="text" placeholder="" class="form-control input-md">
+      <?php
+      $result = mysqli_query($con,"SELECT diplomapercent FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result))
+      {
+          echo "<input id=\"diploma\" name=\"diploma\" type=\"text\" value = ". $db_field['diplomapercent'] . " class=\"form-control input-md\">";
+      }
+      ?>
+
     
   </div>
 </div>
@@ -113,7 +184,14 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="cgpa">CGPA</label>  
   <div class="col-md-2">
-  <input id="cgpa" name="cgpa" type="text" placeholder="" class="form-control input-md">
+      <?php
+      $result = mysqli_query($con,"SELECT cgpa FROM student where USN = '$uname';");
+      while($db_field=mysqli_fetch_assoc($result))
+      {
+          echo "<input id=\"cgpa\" name=\"cgpa\" type=\"text\" value = ". $db_field['cgpa'] . " class=\"form-control input-md\">";
+      }
+      ?>
+
     
   </div>
 </div>
