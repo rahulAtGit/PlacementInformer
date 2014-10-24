@@ -102,21 +102,16 @@
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="branch">Branch</label>
-                <div class="col-md-5">
-                    <input id="branch" name="branch" type="text" class="form-control input-md">
-                    <select id="branch" name="branch" type="text" class="form-control input-md">
+                    <!-- -->
+                    <select id="branch" name="branch" class="form-control input-md" type="text">
                         <?php
                         require_once('php/dbconnector.php');
-                        $result = mysqli_query($con, "select branch from branches;");
+                        $result = mysqli_query($con, "select * from branches;");
                         while ($row = mysqli_fetch_assoc($result)) {
                             ?>
-                            <option selected ><?php echo $row['branch']; ?></option>
+                            <option ><?php echo $row['branch']; ?></option>
                         <?php } ?>
                     </select>
-                    </input>
-                    <!--<input id="branch" name="branch" type="text" placeholder="Branch" class="form-control input-md">
-                    -->
-                </div>
             </div>
 
             <div class="form-group">
