@@ -104,13 +104,13 @@
                 <label class="col-md-4 control-label" for="branch">Branch</label>
                     <!-- -->
                 <div class="col-md-5">
-                    <select id="branch" name="branch" class="form-control t">
+                    <select id="branch" name="branch" class="form-control">
                         <?php
                         require_once('php/dbconnector.php');
                         $result = mysqli_query($con, "select * from branches;");
                         while ($row = mysqli_fetch_assoc($result)) {
                             ?>
-                            <option ><?php echo $row['branch']; ?></option>
+                            <option value = "<?php echo $row['branch']; ?>"><?php echo $row['branch']; ?></option>
                         <?php } ?>
                     </select>
                     </div>
@@ -164,7 +164,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"></label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-success">Submit</button>
+                    <button id="submit"  value="submit" name="submit" class="btn btn-success">Submit</button>
                 </div>
             </div>
 
