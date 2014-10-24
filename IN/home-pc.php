@@ -163,6 +163,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 				
         </div>
         <div class="modal-footer">
+        		<a href="#" style="position:relative; float:left">Forgot password?</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-success">Save changes</button>
         </div>
