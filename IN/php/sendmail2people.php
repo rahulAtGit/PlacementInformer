@@ -74,8 +74,9 @@ function sendmail($toemailid,$name, $subject, $body)
     } else {
         echo "Message sent!";
     }
-    ?><pre>
-    <?php var_dump($mail);?>
+    ?>
+    <pre>
+        <?php var_dump($mail);?>
     </pre>
 <?
 }

@@ -39,7 +39,14 @@ if($r == 1) {
     }
 
     $result5=$mysqli->query("select * from student where CGPA >= '$cgpa' and tenthPercent >='$ctenth' and (twelthPercent >='$ctwelth' or diplomaPercent >= '$cdiploma')");
-    $body = "Incoming Company ".$cname."Package : ".$cpackage."Visit the site for more details";
+    $body = "<!DOCTYPE html>";
+$body.="<html><head><title >Incoming Company</title></head><body><h1 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >RVCE Placements</h1><h3 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >Incoming Company</h3><h4 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >Name: ";
+    $body.=$cname;
+$body.="</h4><h4 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >Profile:";
+    $body.=$cjob;
+$body.="</h4><h4 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >Package:";
+    $body.=$cpackage;
+$body.="</h4><h5 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >For more details please visit placementrvce.com</h5></body></html>";
     while($ar=mysqli_fetch_assoc($result5))
     {
         $em = $ar['EMAIL'];
