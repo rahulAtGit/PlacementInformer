@@ -104,8 +104,41 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
            <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle img-responsive" class="img-responsive" id="logo"></a>
 		
             </div>
+            <?php
+
+
+            $uname = $_SESSION['usernameT'];
+            $host="localhost"; // Host name or server name
+            $username="root"; // Mysql username
+            $password=""; // Mysql password
+            $db_name="placementinformer"; // Database name
+            $tbl_name="student"; // Table name
+            $con = mysqli_connect("$host", "$username", "$password","$db_name");
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+            ?>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+
+                    <?php
+                    $host="localhost"; // Host name or server name
+                    $username="root"; // Mysql username
+                    $password=""; // Mysql password
+                    $db_name="placementinformer"; // Database name
+                    $tbl_name="student"; // Table name
+                    $con = mysqli_connect("$host", "$username", "$password","$db_name");
+                    if (mysqli_connect_errno()) {
+                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    }
+                    session_start();
+                    $uname =  $_SESSION['userNameT'];
+                    $result = mysqli_query($con,"SELECT * FROM SPC where USN = '$uname';");
+                    if(mysqli_num_rows($result)>0)
+                    {
+                        echo "<li><a href=\"studentHome.php\" >Student View</a></li>";
+                    }
+                    ?>
                     <li><a href="edit-profile.php" >Edit Profile</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
                     <li><a href="php/logout.php">Logout</a></li>
@@ -403,7 +436,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
           <?php
 
-          $result = mysqli_query($con,"SELECT * FROM COMPANY as C, DATEOFVISIT as D where C.NAME = D.NAME and D.DATE = curdate() ORDER BY D.DATE");
+          $result = mysqli_query($con,"SELECT C.NAME, C.lastDateReg FROM COMPANY as C, DATEOFVISIT as D where C.NAME = D.NAME and D.DATE = curdate() ORDER BY D.DATE");
             if(mysqli_num_rows($result)==0)
             {
                 echo "<div class=\"container-fluid col\" >";
@@ -411,22 +444,21 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                 echo "</div>";
 
             }
-          else {
-              while ($db_field = mysqli_fetch_assoc($result)) {
-                  echo "<div class=\"container-fluid col\" >";
-                  echo "<div class=\"col-md-6 col-sm-12 col-lg-6 col-xs-12 each\">Company Name:";
+//          echo mysqli_num_rows($result);
+          while ($db_field = mysqli_fetch_assoc($result)) {
+              echo "<div class=\"container-fluid col\" >";
+              echo "<div class=\"col-md-6 col-sm-12 col-lg-6 col-xs-12 each\">Company Name:";
 
-                  $companyName = $db_field['NAME'];
-                  echo "<span style='color:blue;margin-left:10px;'>" . $companyName . "</span>";
-                  echo "</div>";
-                  echo "<div class=\"col-md-6 col-sm-12 col-lg-6 col-xs-12 each\">To Be Sent Before:";
-                  echo "<span style='color:blue;margin-left:10px;'>" . $db_field['lastDateReg'] . "</span>";
+              $companyName = $db_field['NAME'];
+              echo "<span style='color:blue;margin-left:10px;'>" . $companyName . "</span>";
+              echo "</div>";
+              echo "<div class=\"col-md-6 col-sm-12 col-lg-6 col-xs-12 each\">To Be Sent Before:";
+              echo "<span style='color:blue;margin-left:10px;'>" . $db_field['lastDateReg'] . "</span>";
 
 
-                  echo "</div>";
-                  echo "<div class=\"col-md-2 col-sm-12 col-lg-2 col-xs-12 col-md-push-10 col-lg-push-10 each1\"> <button type=\"button\" class=\"btn btn-success\">Download</button></div>";
-                  echo "</div>";
-              }
+              echo "</div>";
+              echo "<div class=\"col-md-2 col-sm-12 col-lg-2 col-xs-12 col-md-push-10 col-lg-push-10 each1\"> <button type=\"button\" class=\"btn btn-success\">Download</button></div>";
+              echo "</div>";
           }
 
           ?>

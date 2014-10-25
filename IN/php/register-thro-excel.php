@@ -112,7 +112,7 @@ $sql = "insert into temp values('$usn','$name','$email','$code')";
 $retval1 = mysqli_query( $mysqli, $sql);
 
 if($retval1){
-$sql2="delete from temp1 where usn='$usn'"
+$sql2="delete from temp1 where usn='$usn'";
 $retval2 = mysqli_query( $mysqli, $sql);
 
 sendmail($usn,$name,$email,$code);

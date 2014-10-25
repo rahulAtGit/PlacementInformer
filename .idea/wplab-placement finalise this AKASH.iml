@@ -14,16 +14,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar:///usr/share/php/pyrus.phar" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar:///usr/share/php/pyrus.phar" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
 

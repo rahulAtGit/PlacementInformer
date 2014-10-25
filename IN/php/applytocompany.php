@@ -45,6 +45,7 @@ if(mysqli_num_rows($r0)==0 ){
 
     $date = date('Y-m-d H:i:s');
   //  echo $date;
+    echo $ca['lastDateReg'];
     if ($ca['lastDateReg'] > $date) {
         if ($ca['GPACUTOFF'] <= $sa['CGPA'] && $sa['tenthPercent'] >= $ca['TENTHCUTOFF'] && (($ca['PUCCUTOFF'] <= $sa['twelthPercent']) || ($ca['DIPLOMACUTOFF'] <= $sa['diplomaPercent']))) {
 //Inserting into the company
@@ -65,8 +66,6 @@ if(mysqli_num_rows($r0)==0 ){
     } else {
         echo 'Error : You have crossed the deadline. Please contact your placement coordinator.';
     }
-
-
 }
 else
 {
