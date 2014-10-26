@@ -1,4 +1,3 @@
-<html>
 <?php
 
 $mysqli = new mysqli("localhost", "root", "", "placementinformer"); // put "" for the password if you want to run them
@@ -25,19 +24,41 @@ $con = mysqli_connect("$host", "$username", "$password","$db_name");
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-$f1 = '/var/www/';
-$fname = 'wp/IN/files/'.$_SESSION['username'].time().'.csv';
-unlink($fname);
-echo $fname;
-echo $f1;
-$tname='student'; // Table name
-$f2 = $f1.$fname;
-$res = mysqli_query($con," SELECT * INTO OUTFILE  '$f2' FIELDS TERMINATED BY  ',' OPTIONALLY ENCLOSED BY  '\"' LINES TERMINATED BY  '\n' FROM $tname  ;");
-var_dump($res);
-var_dump($con);
-$f3 = 'http://localhost/'.$fname;
+$fname = '/tmp/'.$_SESSION['username'].time().'.csv';
+
+$cname=$_POST['companyname'];
+//$cname='Comm';
+$q="SELECT s.USN, s.NAME, s.BRANCH, s.EMAIL, s.PHONE,s.CGPA, s.tenthPercent, s.twelthpercent INTO OUTFILE  '$fname' FIELDS TERMINATED BY  ',' OPTIONALLY ENCLOSED BY  '\"' LINES TERMINATED BY  '\n' FROM student as s , applied as a WHERE a.USN=s.USN and a.name = '$cname'";
+
+$res = mysqli_query($con,$q);
+
+$download_file = $cname.time().'.csv';
+
+// set the download rate limit (=> 20,5 kb/s)
+$download_rate=20.5;
+if(file_exists($fname) && is_file($fname))
+{
+    header('Cache-control: private');
+    header('Content-Type: text/csv');
+    header('Content-Length: '.filesize($fname));
+    header('Content-Disposition: filename='.$download_file);
+    flush();
+    $file = fopen($fname, "r");
+    while(!feof($file))
+    {
+        // send the current file part to the browser
+        print fread($file, round($download_rate * 1024));
+        // flush the content to the browser
+        flush();
+        // sleep one second
+        sleep(1);
+    }
+    fclose($file);
+}
+else {
+    die('Error: The file '.$fname.' does not exist!');
+}
+
+
 ?>
-<body>
-    <?php echo "<a href= '$f3'>test</a>"?>
-</body>
-</html>
+

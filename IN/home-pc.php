@@ -131,8 +131,9 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                     if (mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
-                    session_start();
-                    $uname =  $_SESSION['userNameT'];
+                    //session_start();
+                    $uname =  $_SESSION['userName'];
+
                     $result = mysqli_query($con,"SELECT * FROM SPC where USN = '$uname';");
                     if(mysqli_num_rows($result)>0)
                     {
@@ -477,10 +478,14 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                 echo "<div class=\"col-md-6 col-sm-12 col-lg-6 col-xs-12 each\">To Be Sent Before:";
                 echo "<span style='color:blue;margin-left:10px;'>" . $db_field['lastDateReg'] . "</span>";
 
-
+                echo "<form action='php/exporttoexcel.php' target='_blank'>";
+                $s= "<input type='hidden' name='companyname' value='";
+                $s.=$companyName."'";
+                echo $s;
                 echo "</div>";
-                echo "<div class=\"col-md-2 col-sm-12 col-lg-2 col-xs-12 col-md-push-10 col-lg-push-10 each1\"> <button type=\"button\" class=\"btn btn-success\">Download</button></div>";
+                echo "<div class=\"col-md-2 col-sm-12 col-lg-2 col-xs-12 col-md-push-10 col-lg-push-10 each1\"> <input type=\"submit\" class=\"btn btn-success\" value=\"Download\"></div>";
                 echo "</div>";
+                echo "</form>";
             }?>
 
         <h4 class="panel-heading">Visited Companies:</h4>
