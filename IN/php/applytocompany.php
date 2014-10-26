@@ -50,7 +50,8 @@ if(mysqli_num_rows($r0)==0 ){
         if ($ca['GPACUTOFF'] <= $sa['CGPA'] && $sa['tenthPercent'] >= $ca['TENTHCUTOFF'] && (($ca['PUCCUTOFF'] <= $sa['twelthPercent']) || ($ca['DIPLOMACUTOFF'] <= $sa['diplomaPercent']))) {
 //Inserting into the company
             $t = time();
-            $res = mysqli_query($mysqli, "INSERT INTO applied VALUES ('$usn','$nameofcomp','CURRENT_TIMESTAMP')");
+            $deadline = $ca['lastDateReg'];
+            $res = mysqli_query($mysqli, "INSERT INTO applied VALUES ('$usn','$nameofcomp','$deadline')");
 
 //send email
             $body = "<html><style>p{color: #009900;}</style><body><p>You have registered for " . $ca['NAME'] . " The details are as follows. <br></p><ul><li> Package : " . $ca['PACKAGE'] . "</li><li> Profiles" . "</li></ul></body></html>";

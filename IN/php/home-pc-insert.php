@@ -4,7 +4,7 @@ error_reporting(0);
 
 require_once('dbconnector.php');
 require('uploadfiles.php');
-//require('sendmail2people.php');
+require('sendmail2people.php');
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 $cname = $_POST['cname'];
@@ -29,7 +29,7 @@ if($r == 1) {
         $result4 = $mysqli->query("INSERT INTO `brancheseligible` (`NAME`, `BRANCH`) VALUES ('$cname', '$selected');");
     }
 
-    $result5=$mysqli->query("select * from student where CGPA >= '$cgpa' and tenthPercent >='$ctenth' and (twelthPercent >='$ctwelth' or diplomaPercent >= '$cdiploma')");
+    $result5=$mysqli->query("select * from student where CGPA >= '$ccgpa' and tenthPercent >='$ctenth' and (twelthPercent >='$ctwelth' or diplomaPercent >= '$cdiploma')");
     $body = "<!DOCTYPE html>";
 $body.="<html><head><title >Incoming Company</title></head><body><h1 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >RVCE Placements</h1><h3 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >Incoming Company</h3><h4 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"  >Name: ";
     $body.=$cname;

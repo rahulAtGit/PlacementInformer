@@ -6,10 +6,10 @@ if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
+    $passkey = $_GET['passkey'];
 
 if(isset($passkey)) {
 
-    $passkey = $_GET['passkey'];
     $tbl_name = "temp";
 
 // Retrieve data from table where row that match this passkey 

@@ -76,7 +76,7 @@ function sendmail($toemailid,$name, $subject, $body)
     }
     ?>
     <pre>
-        <?php var_dump($mail);?>
+        <?php //var_dump($mail);?>
     </pre>
 <?php
 }

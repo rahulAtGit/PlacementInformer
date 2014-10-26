@@ -198,7 +198,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 				
         </div>
         <div class="modal-footer">
-        		<a href="#" style="position:relative; float:left">Forgot password?</a>
+        		<a href="php/mailForgotPassword.php" style="position:relative; float:left">Forgot password?</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" name = "submit" class="btn btn-success" action = "<?php echo htmlspecialchars('php/changePassword.php');?>" id = "submit">Save changes</button>
         </div>

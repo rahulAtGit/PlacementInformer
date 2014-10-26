@@ -50,6 +50,11 @@ if($password == $confirmpass)
     $result1 = mysqli_query($mysqli,"INSERT INTO `student` (`USN`, `NAME`, `BRANCH`, `EMAIL`, `PHONE`, `CGPA`, `tenthPercent`, `twelthPercent`, `diplomapercent`) VALUES ('$usn', '$name', '$branch', '$email','$phone','$cgpa', '$tenth','$twelth', '$diploma');");
     //print_r($result1);
     $result3 = mysqli_query($mysqli,"INSERT into `login` VALUES ('$usn','$passMD5');");
+    
+    
+    $passkey = $_GET['code'];
+
+    $result4 = mysqli_query($mysqli,"DELETE from temp where code = '$passkey';");
 
     echo '</pre>';
     echo "Done";
