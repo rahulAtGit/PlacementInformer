@@ -71,7 +71,7 @@
             $result = mysqli_query($con,"SELECT usn FROM student where USN = '$uname';");
             while($db_field=mysqli_fetch_assoc($result))
             {
-                echo "<input id=\"usn\" name=\"usn\" type=\"text\"  value = " . $db_field['usn']  . "  class=\"form-control input-md\">";
+                echo "<input id=\"usn\" name=\"usn\" type=\"text\"  value = " . $db_field['usn']  . "  class=\"form-control input-md\" readonly>";
             }
 
             ?>
