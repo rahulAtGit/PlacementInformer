@@ -481,7 +481,6 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                 echo "<form action='php/exporttoexcel.php' target='_blank'>";
                 $s= "<input type='hidden' name='companyname' value='";
                 $s.=$companyName."'";
-                echo $s;
                 echo "</div>";
                 echo "<div class=\"col-md-2 col-sm-12 col-lg-2 col-xs-12 col-md-push-10 col-lg-push-10 each1\"> <input type=\"submit\" class=\"btn btn-success\" value=\"Download\"></div>";
                 echo "</div>";
