@@ -1,19 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 3.2.0.1
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Oct 25, 2014 at 04:18 PM
--- Server version: 5.1.36
--- PHP Version: 5.3.0
+
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `placementinformer`
@@ -24,6 +11,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Table structure for table `applied`
 --
+
+create database `placementinformer`;
+
+use `placementinformer`;
 
 CREATE TABLE IF NOT EXISTS `applied` (
   `USN` varchar(10) DEFAULT NULL,
@@ -312,15 +303,15 @@ CREATE TABLE IF NOT EXISTS `temp` (
   `email` varchar(40) NOT NULL,
   `code` varchar(65) DEFAULT NULL,
   PRIMARY KEY (`usn`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `temp`
 --
 
 INSERT INTO `temp` (`usn`, `name`, `email`, `code`) VALUES
-('1RV11IS040', 'RAHUL R', 'rahul.rvce.is@gmail.com', 'a93370e2ac945edc6acca2a9b95ea7f0'),
-('1RV11IS006', 'AKASH', 'aakaashh.s@gmail.com', '1d73cd08ced52744735e0bca52989c5b');
+('1RV11IS006', 'AKASH', 'aakaashh.s@gmail.com', '1d73cd08ced52744735e0bca52989c5b'),
+('1RV11IS040', 'RAHUL R', 'rahul.rvce.is@gmail.com', 'a93370e2ac945edc6acca2a9b95ea7f0');
 
 -- --------------------------------------------------------
 
