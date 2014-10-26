@@ -104,7 +104,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
            <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle img-responsive" class="img-responsive" id="logo"></a>
 		
             </div>
-            <?php
+           <?php
 
 
             $uname = $_SESSION['usernameT'];
@@ -117,6 +117,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
             if (mysqli_connect_errno()) {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
             }
+
             ?>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -131,9 +132,8 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                     if (mysqli_connect_errno()) {
                         echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
-                    //session_start();
-                    $uname =  $_SESSION['userName'];
-
+                    session_start();
+                    $uname =  $_SESSION['userNameT'];
                     $result = mysqli_query($con,"SELECT * FROM SPC where USN = '$uname';");
                     if(mysqli_num_rows($result)>0)
                     {
