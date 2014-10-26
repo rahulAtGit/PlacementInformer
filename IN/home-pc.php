@@ -160,7 +160,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
         </div>
         
         <div class="modal-body">
-        <form class="form-horizontal" name = "changePassword">
+        <form class="form-horizontal" method="post" name =  "changePass" action = "<?php echo htmlspecialchars('php/changePassword.php');?>" id = "changePass">
 		<fieldset>
 
 <!-- Password input-->
@@ -190,7 +190,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 
 		</fieldset>
 		
-		</form>
+
 
 				
 				
@@ -198,8 +198,9 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
         <div class="modal-footer">
         		<a href="#" style="position:relative; float:left">Forgot password?</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success">Save changes</button>
+            <button type="submit" name = "submit" class="btn btn-success" action = "<?php echo htmlspecialchars('php/changePassword.php');?>" id = "submit">Save changes</button>
         </div>
+            </form>
     	</div>
  		</div>
 		</div>

@@ -202,55 +202,54 @@ header('Location: ../');
         </div>
 	<!--	</div>-->
 
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" method="post" name =  "changePass" action = "<?php echo htmlspecialchars('php/changePassword.php');?>" id = "changePass">
+                        <fieldset>
 
-		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    	<div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="curpass">Current Password</label>
+                                <div class="col-md-5">
+                                    <input id="curpass" name="curpass" type="password" placeholder="Current Password" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="newpass">New Password</label>
+                                <div class="col-md-5">
+                                    <input id="newpass" name="newpass" type="password" placeholder="New Password" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="connewpass">Confirm New Password</label>
+                                <div class="col-md-5">
+                                    <input id="connewpass" name="connewpass" type="password" placeholder="Confirm New Password" class="form-control input-md">
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" style="position:relative; float:left">Forgot password?</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" name = "submit" class="btn btn-success" action = "<?php echo htmlspecialchars('php/changePassword.php');?>" id = "submit">Save changes</button>
+                </div>
+                </form>
             </div>
-            <div class="modal-body">
-            <form class="form-horizontal">
-			<fieldset>
-
-
-<!-- Password input-->
-			<div class="form-group">
-		    <label class="col-md-4 control-label" for="curpass">Current Password</label>
-		    <div class="col-md-5">
-    			<input id="curpass" name="curpass" type="password" placeholder="Current Password" class="form-control input-md">
-		    </div>
-			</div>
-
-<!-- Password input-->
-			<div class="form-group">
-			<label class="col-md-4 control-label" for="newpass">New Password</label>
-			<div class="col-md-5">
-    			<input id="newpass" name="newpass" type="password" placeholder="New Password" class="form-control input-md">
- 			</div>
-			</div>
-
-<!-- Password input-->
-			<div class="form-group">
-  			<label class="col-md-4 control-label" for="connewpass">Confirm New Password</label>
-  			<div class="col-md-5">
-    			<input id="connewpass" name="connewpass" type="password" placeholder="Confirm New Password" class="form-control input-md">
-		    </div>
-			</div>
-
-			</fieldset>
-			</form>
-
         </div>
-        <div class="modal-footer">
-        <a href="#" style="position:relative; float:left">Forgot password?</a>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
-        </div>
-    	</div>
-  		</div>
-		</div>
-
+    </div>
 
 
 
