@@ -1,3 +1,9 @@
+<html><head>
+<script src="js/jquery.min202.js" type="text/javascript"></script>
+<script src="js/jquery.growl.js" type="text/javascript"></script>
+<link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
 <?php
 error_reporting(0);
 
@@ -41,12 +47,17 @@ $body.="</h4><h5 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"
     while($ar=mysqli_fetch_assoc($result5))
     {
         $em = $ar['EMAIL'];
-        echo $em;
         sendmail($em,'Student', 'Incoming Company',$body);
     }
-    echo "Done";
+    ?>
+    <script type="text/javascript">
+        $.growl.notice({ message: "new company inserted" });
+    </script>
 
+<?
 }
-
+header('Location: ../../');
 
 ?>
+
+</body></html>

@@ -1,3 +1,10 @@
+<html>
+<head>
+    <script src="js/jquery.min202.js" type="text/javascript"></script>
+    <script src="js/jquery.growl.js" type="text/javascript"></script>
+    <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
 <?php
 error_reporting(0);
 
@@ -27,7 +34,11 @@ if ($result->num_rows == 1) {
     header("location: ../studentHome.php"); // Redirecting To Other Page
 }
 else {
-    $error = "Username or Password is invalid";
+    ?>
+    <script>
+    $.growl.error({ message: "Invalid Login" });
+    </script>
+    <?
     header('Location: ../..');
     echo $error;
     session_destroy();
@@ -35,3 +46,5 @@ else {
 }
 
 ?>
+</body>
+</html>

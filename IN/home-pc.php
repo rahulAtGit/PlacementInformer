@@ -27,7 +27,9 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/simple-sidebar.css" rel="stylesheet">
-    
+        <script src="js/jquery.min202.js" type="text/javascript"></script>
+        <script src="js/jquery.growl.js" type="text/javascript"></script>
+        <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
 		<!-- Custom CSS -->
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
