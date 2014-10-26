@@ -138,6 +138,7 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
                     if(mysqli_num_rows($result)>0)
                     {
                         echo "<li><a href=\"studentHome.php\" >Student View</a></li>";
+                        echo "<li><a href=\"register-new.php\" >Add students</a></li>";
                     }
                     ?>
                     <li><a href="edit-profile.php" >Edit Profile</a></li>
