@@ -1,11 +1,14 @@
 <?php
             error_reporting(0);
 
+
             session_start();
+ 
             if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
             {
               header('Location: ../');
             }
+
 
             $host="localhost"; // Host name or server name
             $username="root"; // Mysql username
@@ -70,13 +73,14 @@
     ?>
 
 
-    <?
+    <?php
 
     if(isset($_SESSION['err']))
     {
         echo '<div class="alert alert-success text-center" role="alert"><strong>Success!</strong>Profile Updated</div>';
     }
-    unset($_SESSION['err']);
+                               unset($_SESSION['err']);
+
     ?>
 
 </head>
@@ -137,12 +141,6 @@
 
 <form class="form-horizontal" name = "edit-profile" method = "post" id = "edit-profile" action = "<?php echo htmlspecialchars('php/edit-profile-insert.php');?>">
 <fieldset>
-
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> 04eefa7d97ab0e28c99847490e11ac9d2411abb7
 <!-- Form Name -->
 <legend>Profile</legend>
 
