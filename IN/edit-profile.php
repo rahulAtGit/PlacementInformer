@@ -1,3 +1,27 @@
+<?php
+            error_reporting(0);
+
+            session_start();
+            if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
+            {
+              header('Location: ../');
+            }
+
+            $host="localhost"; // Host name or server name
+            $username="root"; // Mysql username
+            $password=""; // Mysql password
+            $db_name="placementinformer"; // Database name
+            $tbl_name="student"; // Table name
+            $con = mysqli_connect("$host", "$username", "$password","$db_name");
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+            //session_start();
+            $uname =  $_SESSION['userNameT'];
+            $result = mysqli_query($con,"SELECT name FROM student where USN = '$uname';");
+            
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +58,9 @@
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	<link href="gener/genericons.css" rel="stylesheet">
-	<link href="css/signup-css/main.css" rel="stylesheet" />
+
+
+    <link href="css/edit-profile-css/main.css" rel="stylesheet" />
 
     <?php
     require_once('php/dbconnector.php');
@@ -52,21 +78,71 @@
     }
     unset($_SESSION['err']);
     ?>
+
 </head>
 
 <body>
+
+
+    <div class="navbar navbar-inverse" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+      <!--  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Profile</a>
+                    <span class="genericon genericon-menu"></span>
+                </a>-->
+      <!--  <div alt="f419" class="genericon genericon-menu"></div>
+        -->
+           <a class="navbar-brand" href="#"><img src="images/rvce.jpg" class="img-circle" class="img-responsive" id="logo"></a>
+
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <?php
+                    $result = mysqli_query($con,"SELECT * FROM SPC where USN = '$uname';");
+                    if(mysqli_num_rows($result)>0)
+                    {
+                        echo "<li><a href=\"home-pc.php\" >PC View</a></li>";
+                    }
+                    ?>
+                    <?php
+                    $result = mysqli_query($con,"SELECT * FROM SPC where USN = '$uname';");
+                    if(mysqli_num_rows($result)>0)
+                    {
+                        echo "<li><a href=\"studentHome.php\" >Student View</a></li>";
+                        echo "<li><a href=\"register-new.php\" >Add students</a></li>";
+                    }
+                    else
+                    {
+                        echo "<li><a href=\"studentHome.php\" >Home</a></li>";
+                    }
+                    ?>
+                    <li><a href="edit-profile.php" >Edit Profile</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#basicModal">Change Password?</a></li>
+                    <li><a href="php/logout.php">Logout</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+        </div>
 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 vcentre">
 
-<br/>
 
-<br/>
-<div class="col-lg-offset-5 col-md-offset-5 logo">
-	<img src="images/logo.png">
-</div>
 
 <form class="form-horizontal" name = "edit-profile" method = "post" id = "edit-profile" action = "<?php echo htmlspecialchars('php/edit-profile-insert.php');?>">
 <fieldset>
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 04eefa7d97ab0e28c99847490e11ac9d2411abb7
 <!-- Form Name -->
 <legend>Profile</legend>
 
@@ -79,7 +155,7 @@
             $result = mysqli_query($con,"SELECT usn FROM student where USN = '$uname';");
             while($db_field=mysqli_fetch_assoc($result))
             {
-                echo "<input id=\"usn\" name=\"usn\" type=\"text\"  value = " . $db_field['usn']  . "  class=\"form-control input-md\">";
+                echo "<input id=\"usn\" name=\"usn\" type=\"text\"  value = " . $db_field['usn']  . "  class=\"form-control input-md\" readonly>";
             }
 
             ?>

@@ -87,7 +87,6 @@ function sendmail($toemailid,$name, $subject, $body)
         echo '<div class="alert alert-success text-center" role="alert"><strong>Success! </strong> Message Sent</div>';
     }
     ?>
-
 <?php
 }
 

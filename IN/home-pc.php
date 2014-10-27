@@ -143,6 +143,7 @@ if(isset($_SESSION['err'])){
                     if(mysqli_num_rows($result)>0)
                     {
                         echo "<li><a href=\"studentHome.php\" >Student View</a></li>";
+                        echo "<li><a href=\"register-new.php\" >Add students</a></li>";
                     }
                     ?>
                     <li><a href="edit-profile.php" >Edit Profile</a></li>
@@ -202,7 +203,7 @@ if(isset($_SESSION['err'])){
 				
         </div>
         <div class="modal-footer">
-        		<a href="#" style="position:relative; float:left">Forgot password?</a>
+        		<a href="php/mailForgotPassword.php" style="position:relative; float:left">Forgot password?</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" name = "submit" class="btn btn-success" action = "<?php echo htmlspecialchars('php/changePassword.php');?>" id = "submit">Save changes</button>
         </div>
@@ -486,7 +487,6 @@ if(isset($_SESSION['err'])){
                 echo "<form action='php/exporttoexcel.php' target='_blank'>";
                 $s= "<input type='hidden' name='companyname' value='";
                 $s.=$companyName."'";
-                echo $s;
                 echo "</div>";
                 echo "<div class=\"col-md-2 col-sm-12 col-lg-2 col-xs-12 col-md-push-10 col-lg-push-10 each1\"> <input type=\"submit\" class=\"btn btn-success\" value=\"Download\"></div>";
                 echo "</div>";

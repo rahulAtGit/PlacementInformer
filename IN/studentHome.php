@@ -189,6 +189,7 @@ header('Location: ../');
                     if(mysqli_num_rows($result)>0)
                     {
                         echo "<li><a href=\"home-pc.php\" >PC View</a></li>";
+                        echo "<li><a href=\"register-new.php\" >Add students</a></li>";
                     }
                     ?>
                     <li><a href="edit-profile.php" >Edit Profile</a></li>
