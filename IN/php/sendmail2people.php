@@ -1,4 +1,16 @@
-<?php
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Placement Informer</title>
+    <script type="text/javascript" src="IN/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="IN/css/bootstrap.min.css"></head>
+    <?php
 error_reporting(E_ALL);
 /**
  * Created by PhpStorm.
@@ -72,12 +84,10 @@ function sendmail($toemailid,$name, $subject, $body)
         echo "Mailer Error: " . $mail->ErrorInfo;
 
     } else {
-        echo "Message sent!";
+        echo '<div class="alert alert-success text-center" role="alert"><strong>Success! </strong> Message Sent</div>';
     }
     ?>
-    <pre>
-        <?php var_dump($mail);?>
-    </pre>
+
 <?php
 }
 

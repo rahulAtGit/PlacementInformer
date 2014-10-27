@@ -1,28 +1,38 @@
-<?php
-session_start();
-if (isset($_SESSION['username']))
-{
-    header('Location: IN/studentHome.php');
-}
-else
-{
-    session_destroy();
-}
-?>
 <!DOCTYPE html>
 <html>
 
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <title>Placement Informer</title>
+    <title>Placement Informer</title>
+    <script type="text/javascript" src="IN/js/bootstrap.min.js"></script>
 
-  <style>
+<link rel="stylesheet" href="IN/css/bootstrap.min.css">
+
+
+
+    <?php
+session_start();
+if (isset($_SESSION['username']))
+{
+    unset($_SESSION['err']);
+    header('Location: IN/studentHome.php');
+}
+else
+{
+    if(isset($_SESSION['err'])){
+        echo '<div class="alert alert-danger text-center" role="alert"><strong>Error! </strong> Wrong username or password.</div>';
+
+    }
+}
+?>
+        <style>
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
 </style>
+
 
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto+Slab'>
       <link rel="SHORTCUT ICON" href="images/rvce.ico">
@@ -163,17 +173,17 @@ top:55%;
 </head>
 
 <body>
+<div class='preload login--container'>
 
-  <div class='preload login--container'>
   <form class="form col-md-12 center-block" method="post" action="IN/php/loginCheck.php">
   <div class='login--form'>
     <div class='login--username-container'>
       <label>Username</label>
-      <input autofocus placeholder='Username' type='text' name="username">
+      <input autofocus placeholder='Username' type='text' name="username" required>
     </div>
     <div class='login--password-container'>
       <label>Password</label>
-      <input placeholder='Password' type='password' name="password">
+      <input placeholder='Password' type='password' name="password" required>
       <button class='js-toggle-login login--login-submit'>Login</button>
     </div>
   </div>
@@ -192,8 +202,8 @@ top:55%;
 	<h1 id="proj-head">Placement Informer</h1>
 </div>
   <script src='js/jquery.js'></script>
-
   <script src="js/index.js"></script>
+
 
 </body>
 

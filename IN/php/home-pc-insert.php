@@ -1,8 +1,7 @@
 <html><head>
-<script src="js/jquery.min202.js" type="text/javascript"></script>
-<script src="js/jquery.growl.js" type="text/javascript"></script>
-<link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
-</head>
+    <script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="application/javascript" src="../js/notify-combined.min.js"></script>
+    </he</head>
 <body>
 <?php
 error_reporting(0);
@@ -49,13 +48,9 @@ $body.="</h4><h5 style=\"font-family: 'Open Sans', sans-serif\" align=\"center\"
         $em = $ar['EMAIL'];
         sendmail($em,'Student', 'Incoming Company',$body);
     }
-    ?>
-    <script type="text/javascript">
-        $.growl.notice({ message: "new company inserted" });
-    </script>
 
-<?
 }
+$_SESSION['err']="noupload";
 header('Location: ../../');
 
 ?>

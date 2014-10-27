@@ -33,7 +33,7 @@ if(mysqli_num_rows($result)>0)
 */
 //$result1 = $mysqli->query("INSERT INTO `placementinformer`.`student` (`USN`, `NAME`, `BRANCH`, `EMAIL`, `PHONE`, `CGPA`, `tenthPercent`, `twelthPercent`, `diplomapercent`) VALUES ('$usn', '$name', '$branch', '$email','$phone','$cgpa', '$tenth','$twelth', '$diploma');");
 $result1 = $mysqli->query("UPDATE `placementinformer`.`student` SET `NAME` = '$name', `BRANCH` = '$branch', `EMAIL` = '$email', `PHONE` = '$phone', `CGPA` = '$cgpa', `tenthPercent` = '$tenth', `twelthPercent` = '$twelth', `diplomapercent` = '$diploma', `BRANCH` = '$branch' WHERE `student`.`USN` = '1RV11IS042'");
-
-echo "Done";
-echo "<script>"."window.location.href='../edit-profile.php';"."</script>";
+$_SESSION['err']="Done profile";
+echo '<script>alert("'.$_SESSION['err'].'");</script>';
+header('Location: ../edit-profile.php');
 ?>

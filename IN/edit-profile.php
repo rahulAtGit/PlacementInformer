@@ -35,8 +35,23 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	<link href="gener/genericons.css" rel="stylesheet">
 	<link href="css/signup-css/main.css" rel="stylesheet" />
-    
-    
+
+    <?php
+    require_once('php/dbconnector.php');
+    session_start();
+    $uname =  $_SESSION['userNameT'];
+
+    ?>
+
+
+    <?
+
+    if(isset($_SESSION['err']))
+    {
+        echo '<div class="alert alert-success text-center" role="alert"><strong>Success!</strong>Profile Updated</div>';
+    }
+    unset($_SESSION['err']);
+    ?>
 </head>
 
 <body>
@@ -51,13 +66,6 @@
 
 <form class="form-horizontal" name = "edit-profile" method = "post" id = "edit-profile" action = "<?php echo htmlspecialchars('php/edit-profile-insert.php');?>">
 <fieldset>
-
-    <?php
-    require_once('php/dbconnector.php');
-    session_start();
-    $uname =  $_SESSION['userNameT'];
-
-    ?>
 
 <!-- Form Name -->
 <legend>Profile</legend>

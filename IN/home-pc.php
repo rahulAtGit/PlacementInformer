@@ -7,6 +7,10 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
     header('Location: ../');
 }
 
+if(isset($_SESSION['err'])){
+    echo '<div class="alert alert-danger text-center" role="alert"><strong>Error! </strong> Cannot Insert the company.</div>';
+    unset($_SESSION['err']);
+}
 
 ?>
 
@@ -27,10 +31,9 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/simple-sidebar.css" rel="stylesheet">
-        <script src="js/jquery.min202.js" type="text/javascript"></script>
-        <script src="js/jquery.growl.js" type="text/javascript"></script>
-        <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
-		<!-- Custom CSS -->
+
+
+        <!-- Custom CSS -->
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -535,13 +538,17 @@ if ((!isset($_SESSION['username']))||(!isset($_SESSION['password'])))
 		pickerPosition: 'bottom-left',
 		startDate: '+0d'
     });
-	
+
+    <?
+
+    ?>
 </script>
 		 <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
     </script>
 
 <!-- jQuery Version 1.11.0 -->

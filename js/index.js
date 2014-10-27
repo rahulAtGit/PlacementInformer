@@ -1,5 +1,6 @@
 (function() {
   $(function() {
+
     $(".login--container").removeClass("preload");
     this.timer = window.setTimeout((function(_this) {
       return function() {
@@ -14,5 +15,8 @@
       };
     })(this));
   });
+
+
+
 
 }).call(this);

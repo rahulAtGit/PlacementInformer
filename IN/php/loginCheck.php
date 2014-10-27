@@ -1,9 +1,7 @@
 <html>
 <head>
-    <script src="js/jquery.min202.js" type="text/javascript"></script>
-    <script src="js/jquery.growl.js" type="text/javascript"></script>
-    <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
-</head>
+    <script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="application/javascript" src="../js/notify-combined.min.js"></script></head>
 <body>
 <?php
 error_reporting(0);
@@ -23,26 +21,21 @@ $error=''; // Variable To Store Error Message
         $password = $_POST['password'];
         $password=md5($password);
 		$_SESSION['userNameT'] = $username;
-        echo $username.'\n';
-        echo $password;
+
+
 $result = $mysqli->query("SELECT * from login WHERE uname='$username' and password='$password';");
 //echo $result->num_rows;
-echo $result->num_rows;
+
 if ($result->num_rows == 1) {
     $_SESSION['username']=$username; // Initializing Session
     $_SESSION['password']=$password;
     header("location: ../studentHome.php"); // Redirecting To Other Page
 }
 else {
-    ?>
-    <script>
-    $.growl.error({ message: "Invalid Login" });
-    </script>
-    <?
-    header('Location: ../..');
-    echo $error;
-    session_destroy();
 
+
+    $_SESSION['err']="login";
+    header('Location: ../..');
 }
 
 ?>

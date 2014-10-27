@@ -26,20 +26,22 @@ $twelth = $_POST['twelth'];
 $diploma= $_POST['diploma'];
 $password= $_POST['password'];
 $confirmpass= $_POST['confirmpass'];
-echo '<pre>';
+
 
 
 $result = $mysqli->query("SELECT * from student where usn = '$usn';");
 
 if(mysqli_num_rows($result)>0)
 {
-    echo "<script> " ."alert('USN already exists');". "window.location.href='../signup.php'; ".";</script>";
+    $_SESSION['err']="USN already exists";
+    header('Location:../signup.php');
 }
 
 $result2 = $mysqli->query("SELECT * from student where email = '$email';");
 if(mysqli_num_rows($result2)>0)
 {
-    echo "<script> " ."alert('Email ID already exists');" . "window.location.href='../signup.php';"."</script>";
+    $_SESSION['err']="Email ID already exists";
+    header('Location:../signup.php');
 }
 
 
@@ -51,12 +53,14 @@ if($password == $confirmpass)
     //print_r($result1);
     $result3 = mysqli_query($mysqli,"INSERT into `login` VALUES ('$usn','$passMD5');");
 
-    echo '</pre>';
-    echo "Done";
+
+    $_SESSION['err']="Done";
+    header('Location:../..');
 }
 else
 {
-    echo "<script> " ."alert('Passwords does not match');". "window.location.href='../signup.php'; ".";</script>";
+    $_SESSION['err']="Passwords don't match";
+    header('Location:../signup.php');
 }
 
 //echo $cdeadline;

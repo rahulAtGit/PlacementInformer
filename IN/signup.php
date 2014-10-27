@@ -89,7 +89,25 @@ if(isset($passkey)) {
             </head>
 
             <body>
-
+            <?
+            if($_SESSION['err']=="USN already exists")
+            {
+                echo '<div class="alert alert-danger text-center" role="alert"><strong>Error! </strong> USN already exists.</div>';
+            }
+            if($_SESSION['err']=="Email ID already exists")
+            {
+                echo '<div class="alert alert-danger text-center" role="alert"><strong>Error! </strong> Email ID already exists.</div>';
+            }
+            if($_SESSION['err']=="Passwords donot match")
+            {
+                echo '<div class="alert alert-danger text-center" role="alert"><strong>Error! </strong> Passwords do not match.</div>';
+            }
+            if($_SESSION['err']=="Done")
+            {
+                echo '<div class="alert alert-success text-center" role="alert"><strong>Success! </strong></div>';
+            }
+                unset($_SESSION['err']);
+            ?>
             <div
                 class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 vcentre">
 

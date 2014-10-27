@@ -1,30 +1,21 @@
-<?php
-error_reporting(E_ALL);
-ob_implicit_flush(true);
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <script type="application/javascript" src="../../js/toastr.js"></script>
+    <link rel="stylesheet" href="../../css/toastr.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
 
-//If you get Fatal error: Call to undefined function curl_init() , Then you need to enable the curl extension in php.ini
+<body>
+
+<script type='text/javascript'>
+    toastr.info('hi');
 
 
-include_once "class.curl.php";
-include_once "class.sms.php";
-
-$smsapp=new sms();
-$smsapp->setGateway('way2sms'); // you can set gateway to be '160by2' to use your 160by2 account;
+</script>
 
 
-echo "Logging in  ... ";
-$smsapp->login('9482122451','Ramesh64');
-
-echo "Sending SMS ... ";
-$result=$smsapp->send('9482122451','Your text message');
-
-if($result=='true')
-{
-	echo "Message sent";
-}
-else
-{	
-	echo "Error encountered : ".$smsapp->getLastError();
-}
-
-?>
+</body>
+</html>
